@@ -61,7 +61,7 @@
         <result des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat"></result>
       </qualifiers>
     </fielding>
-    <fielding val="2">
+    <fielding val="1">
       <qualifiers infield="c">
         <result des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat"></result>
       </qualifiers>
