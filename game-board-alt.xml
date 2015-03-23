@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<board state="5">
+  <play val="1">
+    <result des="HOMERUN over left field fence" outs="0" runs="3" state="0" type="atbat"></result>
+  </play>
+
+  <play val="9">
+    <result des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat"></result>
+    <qualifiers two_outs="t">
+      <result des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat"></result>
+    </qualifiers>
+
+    <qualifiers against="c">
+      <result des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat"></result>
+    </qualifiers>
+    <qualifiers against="c" two_outs="t">
+      <result des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat"></result>
+    </qualifiers>
+
+    <qualifiers against="b"> 
+      <result des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat"></result>
+    </qualifiers>
+    <qualifiers against="b" two_outs="t">
+      <result des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat"></result>
+    </qualifiers>
+
+    <qualifiers against="a"> 
+      <result des="Fly out; one runner scores; PO-LF" outs="1" runs="1" state="1" type="atbat"></result>
+    </qualifiers>
+    <qualifiers against="a" two_outs="t">
+      <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
+    </qualifiers>
+  </play>
+
+  <play val="12">
+    <fielding val="3">
+      <qualifiers infield="c">
+        <result des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat"></result>
+      </qualifiers>
+      <qualifiers infield="d" zero_outs="t">
+        <result des="Double play; A-1B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat"></result>
+      </qualifiers>
+      <qualifiers infield="d" zero_outs="f">
+        <result des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat"></result>
+      </qualifiers>
+      <qualifiers infield="d" two_outs="t">
+        <result des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat"></result>
+      </qualifiers>
+    </fielding>
+    <fielding val="2">
+      <qualifiers infield="c">
+        <result des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat"></result>
+      </qualifiers>
+      <qualifiers infield="d" zero_outs="t">
+        <result des="Double play; A-1B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat"></result>
+      </qualifiers>
+      <qualifiers infield="d" zero_outs="f">
+        <result des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat"></result>
+      </qualifiers>
+      <qualifiers infield="d" two_outs="t">
+        <result des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat"></result>
+      </qualifiers>
+    </fielding>
+    <fielding val="2">
+      <qualifiers infield="c">
+        <result des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat"></result>
+      </qualifiers>
+      <qualifiers infield="d" zero_outs="t">
+        <result des="Double play; A-2B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat"></result>
+      </qualifiers>
+      <qualifiers infield="d" zero_outs="f">
+        <result des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat"></result>
+      </qualifiers>
+      <qualifiers infield="d" two_outs="t">
+        <result des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat"></result>
+      </qualifiers>
+    </fielding>
+  </play>
+
+  <play val="14">
+    <fielding val="1">
+      <result des="Base on balls, filling the bases" outs="0" runs="0" state="7" type="atbat"></result>
+    </fielding>
+    <fielding val="1">
+      <result des="Base on balls, filling the bases" outs="0" runs="0" state="7" type="atbat"></result>
+    </fielding>
+    <fielding val="1">
+      <result des="Base on balls, filling the bases" outs="0" runs="0" state="7" type="atbat"></result>
+    </fielding>
+  </play>
+
+  <play val="21">
+    <fielding val="3">
+      <qualifiers two_outs="t">
+        <result des="Strikeout; catcher drops third strike; one runner scores; other to second; batter to first; passed ball" outs="0" runs="1" state="3" type="atbat"></result>
+      </qualifiers>
+      <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
+    </fielding>
+
+    <fielding val="2">
+      <qualifiers two_outs="t">
+        <result des="Strikeout; catcher drops third strike; batter safe at first, filling the bases; passed ball" outs="0" runs="0" state="7" type="atbat"></result>
+      </qualifiers>
+      <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
+    </fielding>
+
+    <fielding val="1">
+      <result des="Ball; catcher throws wild to third; one runner scores; other to second; E-C" outs="0" runs="1" state="2" type="action"></result>
+    </fielding>
+  </play>
+
+  <play val="29">
+    <fielding val="3">
+      <result des="Out at first; runner to second; other holds" outs="1" runs="0" state="6" type="atbat"></result>
+      <qualifiers p_sym="x">
+        <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
+      </qualifiers>
+    </fielding>
+    <fielding val="2">
+      <result des="" outs="" runs="" state="" type=""></result>
+      <qualifiers p_sym="x">
+        <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
+      </qualifiers>
+    </fielding>
+    <fielding val="1">
+      <result des="" outs="" runs="" state="" type=""></result>
+      <qualifiers p_sym="x">
+        <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
+      </qualifiers>
+    </fielding>
+  </play>
+
+  <play val="37">
+    <fielding val="3">
+      <qualifiers on_1b_speed="s">
+        <result des="Runner on first holds" outs="0" runs="0" state="5" type="action"></result>
+      </qualifiers>
+      <result des="Runner on first steals second; other holds third" outs="0" runs="0" state="6" type="action"></result>
+    </fielding>
+
+    <fielding val="2">
+      <qualifiers two_outs="t">
+        <result des="Runner on first out stealing 2nd; A-C PO-SS" outs="1" runs="0" state="4" type="action"></result>
+      </qualifiers>
+      <result des="Runner on first out stealing 2nd; A-C PO-SS; other scores" outs="1" runs="1" state="0" type="action"></result>
+    </fielding>
+
+    <fielding val="1">
+      <two_outs val="t">
+        <result des="Runner on first out stealing 2nd" outs="1" runs="0" state="4" type="action"></result>
+      </two_outs>
+      <result des="Runner on first out stealing 2nd; A-C PO-SS; other holds" outs="1" runs="0" state="4" type="action"></result>
+    </fielding>
+  </play>
+
+  <play val="">
+    <fielding val="3">
+      <result des="" outs="" runs="" state="" type=""></result>
+      <qualifiers>
+        <result des="" outs="" runs="" state="" type=""></result>
+      </qualifiers>
+    </fielding>
+    <fielding val="2">
+      <result des="" outs="" runs="" state="" type=""></result>
+      <qualifiers>
+        <result des="" outs="" runs="" state="" type=""></result>
+      </qualifiers>
+    </fielding>
+    <fielding val="1">
+      <result des="" outs="" runs="" state="" type=""></result>
+      <qualifiers>
+        <result des="" outs="" runs="" state="" type=""></result>
+      </qualifiers>
+    </fielding>
+  </play>
+</board>
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<board state="5">
+
+  <play val="1">
+    <result des="HOMERUN over left field fence" outs="0" runs="3" state="0" type="atbat"></result>
+  </play>
+
+  <play val="9">
+    <result against="d" des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat"></result>
+    <result against="d" two_outs="t" des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat"></result>
+    <result against="c" des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat"></result>
+    <result against="c" two_outs="t" des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat"></result>
+    <result against="b" des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat"></result>
+    <result against="b" two_outs="t" des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat"></result>
+    <result against="a" des="Fly out; one runner scores; PO-LF" outs="1" runs="1" state="1" type="atbat"></result>
+    <result against="a" two_outs="t" des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
+  </play>
+
+  <play val="12">
+    <result f="3" infield="c" des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat"></result>
+    <result f="3" infield="d" zero_outs="t" des="Double play; A-1B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat"></result>
+    <result f="3" infield="d" zero_outs="f" des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat"></result>
+    <result f="3" infield="d" two_outs="t" des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat"></result>
+    <result f="2" infield="c" des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat"></result>
+    <result f="2" infield="d" zero_outs="t" des="Double play; A-1B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat"></result>
+    <result f="2" infield="d" zero_outs="f" des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat"></result>
+    <result f="2" infield="d" two_outs="t" des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat"></result>
+    <result f="1" infield="c" des="Safe at first; F.C.; one runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat"></result>
+    <result f="1" infield="d" zero_outs="t" des="Double play; A-2B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat"></result>
+    <result f="1" infield="d" zero_outs="f" des="Double play; A-2B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat"></result>
+  </play>
+
+  <play val="17">
+    <result f="3" des="SINGLE to right; one runner scores; other to second; other scores and batter to second on wild throw; E-RF" outs="0" runs="2" state="2" type="atbat"></result>
+    <result f="2" des="SINGLE to right; one runner scores; other out at third; batter to second on throw to third; A-RF PO-3B" outs="1" runs="1" state="2" type="atbat"></result>
+    <result f="2" two_outs="t" des="SINGLE to right; one runner scores; other out at third; A-RF PO-3B" outs="1" runs="1" state="1" type="atbat"></result>
+    <result f="1" des="SINGLE to right; one runner scores; other scores and batter to 2nd on error; E-RF" outs="0" runs="2" state="2" type="atbat"></result>
+  </play>
+
+  <play val="22">
+    <result f="3" des="Balk; runners advance one base" outs="0" runs="1" state="2" type="action"></result>
+    <result f="2" des="Balk; runners advance one base" outs="0" runs="1" state="2" type="action"></result>
+    <result f="1" des="Balk; runners advance one base" outs="0" runs="1" state="2" type="action"></result>
+  </play>
+
+  <play val="23">
+    <result f="3" des="Game called because of rain" outs="0" runs="0" state="5" type="action"></result>
+    <result f="2" des="Game called because of rain" outs="0" runs="0" state="5" type="action"></result>
+    <result f="1" des="Game called because of rain" outs="0" runs="0" state="5" type="action"></result>
+  </play>
+
+  <!-- these are all the same -->
+  <play val="29">
+    <result f="3" des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat"></result>
+    <result f="3" p_sym="x" des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
+    <result f="2" des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat"></result>
+    <result f="2" p_sym="x" des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
+    <result f="1" des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat"></result>
+    <result f="1" p_sym="x" des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
+  </play>
+
+  <play val="37">
+    <result f="3" des="Runner on first steals second; other holds third" outs="0" runs="0" state="6" type="action"></result>
+    <result f="3" on_1b_speed="s" des="Runner on first holds" outs="0" runs="0" state="5" type="action"></result>
+    <result f="2" des="Runner on first out stealing 2nd; A-C PO-SS; other scores" outs="1" runs="1" state="0" type="action"></result>
+    <result f="2" two_outs="t" des="Runner on first out stealing 2nd; A-C PO-SS" outs="1" runs="0" state="4" type="action"></result>
+    <result f="1" des="Runner on fist out stealing 2nd; A-C PO-SS; other holds" outs="1" runs="0" state="4" type="action"></result>
+    <result f="1" two_outs="t" des="Runner on fist out stealing 2nd" outs="1" runs="0" state="4" type="action"></result>
+  </play>
+
+  <play val="">
+    <result f="3" des="" outs="" runs="" state="" type="atbat"></result>
+    <result f="2" des="" outs="" runs="" state="" type="atbat"></result>
+    <result f="1" des="" outs="" runs="" state="" type="atbat"></result>
+  </play>
+
+
+</board>
+
