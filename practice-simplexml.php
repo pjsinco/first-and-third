@@ -37,11 +37,12 @@ $input = array(
  * 
  * Uncomment as needed
  */
-$q_elems = $board->xpath('//play[@val=12]/fielding[@val=2]');
-//$q_elems = $board->xpath('//play[@val=1]');
-//$q_elems = $board->xpath('//play[@val=9]');
-//$q_elems = $board->xpath('//play[@val=37]/fielding[@val=3]');
-$q_elems = $board->xpath('//play[@val=29]/fielding[@val=3]');
+$xpath = '//play[@val=12]/fielding[@val=2]';
+$xpath = '//play[@val=1]';
+$xpath = '//play[@val=9]';
+//$xpath = '//play[@val=37]/fielding[@val=3]';
+//$xpath = '//play[@val=29]/fielding[@val=3]';
+$q_elems = $board->xpath($xpath);
 
 /**
  * Create an array of available qualifiers for this play value
@@ -98,3 +99,29 @@ foreach ( $qualifiers as $qualifier ) {
 // we need to be make sure this is true
 
 print_r( $qualifier_keys );
+//print_r( count( $qualifier_keys ) );
+
+if ( count( $qualifier_keys ) == 1 ) {
+
+  foreach ( $qualifier_keys as $qualifier_key ) {
+
+    $q = '/qualifiers';
+    foreach ( $qualifier_key as $key ) {
+    
+      $q .= "[@$key=\"{$input[$key]}\"]";
+
+    }
+  
+  }
+  
+// example xpath with not()
+// we need the not()
+print_r( $board->xpath('//play[@val=9]/qualifiers[@against="c" and not(@two_outs|@zero_outs|@foo|@bar)]/result') ); die();
+
+  $xpath .= $q . '/result';
+  echo $xpath . PHP_EOL;
+
+} else {
+  // debug
+  echo 'error in $qualifier_keys';
+}
