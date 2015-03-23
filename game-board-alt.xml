@@ -117,13 +117,13 @@
       </qualifiers>
     </fielding>
     <fielding val="2">
-      <result des="" outs="" runs="" state="" type=""></result>
+      <result des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat"></result>
       <qualifiers p_sym="x">
         <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
       </qualifiers>
     </fielding>
     <fielding val="1">
-      <result des="" outs="" runs="" state="" type=""></result>
+      <result f="1" des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat"></result>
       <qualifiers p_sym="x">
         <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"></result>
       </qualifiers>
