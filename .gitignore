@@ -54,3 +54,10 @@ img/*
 .*.swo
 .*.swm
 
+=======
+*.swp
+*.swo
+*.swm
+psysh
+
+/vendor/
