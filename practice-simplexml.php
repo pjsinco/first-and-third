@@ -1,6 +1,6 @@
 <?php
 
-$board = simplexml_load_file( 'game-board-alt.xml' );
+$board = simplexml_load_file( 'boards/game-board-5.xml' );
 
 /**
  * TEST INPUT
@@ -38,8 +38,8 @@ $input = array(
  * Uncomment as needed
  */
 $xpath = '//play[@val=12]/fielding[@val=2]';
-$xpath = '//play[@val=1]';
-$xpath = '//play[@val=9]';
+//$xpath = '//play[@val=1]';
+//$xpath = '//play[@val=9]';
 //$xpath = '//play[@val=37]/fielding[@val=3]';
 //$xpath = '//play[@val=29]/fielding[@val=3]';
 $q_elems = $board->xpath($xpath);

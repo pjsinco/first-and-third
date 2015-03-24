@@ -17,7 +17,7 @@ class ResultQuery {
   public function __construct( $board_val, $game_state ) {
     $this->game_state = $game_state;
     $this->board_val = $board_val;
-    $this->board = simplexml_load_file( 'game-board-alt.xml' );
+    $this->board = simplexml_load_file( 'boards/game-board-5.xml' );
     $this->xpath = $this->format_xpath( $board_val );
     $this->qualifiers = $this->fetch_qualifiers();
     //print_r( $this->qualifiers );

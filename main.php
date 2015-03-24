@@ -1,6 +1,6 @@
 <?php
-require_once 'class-game-state.php';
-require_once 'class-result-query.php';
+require_once 'inc/class-game-state.php';
+require_once 'inc/class-result-query.php';
 
 $game_state = new GameState();
 
