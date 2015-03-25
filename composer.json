@@ -8,6 +8,7 @@
         }
     ],
     "require": {
-        "phpunit/phpunit": "4.7.*@dev"
+        "phpunit/phpunit": "4.7.*@dev",
+        "oodle/krumo": "dev-master"
     }
 }

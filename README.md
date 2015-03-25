@@ -21,3 +21,5 @@
     * Stack: [PHP and Enumerations](http://stackoverflow.com/questions/254514/php-and-enumerations)
 
 
+###2015-03-25
+* Tuts+: [PHP Exceptions](http://code.tutsplus.com/tutorials/php-exceptions--net-22274)

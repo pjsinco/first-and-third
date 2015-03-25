@@ -1,4 +1,5 @@
 <?php
+require_once 'vendor/oodle/krumo/class.krumo.php';
 
 $board = simplexml_load_file( 'boards/game-board-5.xml' );
 
@@ -38,39 +39,44 @@ $input = array(
  * Uncomment as needed
  */
 $xpath = '//play[@val=12]/fielding[@val=2]';
+//$xpath = '//play[@val=21]/fielding[@val=2]';
 //$xpath = '//play[@val=1]';
 //$xpath = '//play[@val=9]';
 //$xpath = '//play[@val=37]/fielding[@val=3]';
 //$xpath = '//play[@val=29]/fielding[@val=3]';
-$q_elems = $board->xpath($xpath);
+//$xpath = '//play[@val=29]/fielding[@val=1]';
+$conds = $board->xpath($xpath);
 
 /**
- * Create an array of available qualifiers for this play value
+ * Create an array of available conditions for this play value
  *
  */
-$qualifiers = array();
-$qualifier_keys = array();
-foreach ( $q_elems[0] as $q_elem ) {
+$conditions = array();
+$condition_keys = array();
+foreach ( $conds[0] as $cond ) {
 
-  // get the attributes of this qualifiers element
-  $atts = (array) $q_elem->attributes();
+  // make sure we've got a <conditions> elem
+  if ($cond->getName() == 'conditions') {
 
-  // store them in our array
-  $qualifiers[] = $atts['@attributes'];
+    // get the attributes of this <conditions> elem
+    $atts = (array) $cond->attributes();
+
+    // store them in our array
+    $conditions[] = $atts['@attributes'];
+
+  }
 }
 
 /**
- * Now that we have a 2D array of <qualifier> attributes,
+ * Now that we have a 2D array of <conditions> attributes,
  * let's check each for matches against our $input.
  *
  * We should emerge with a single array, which we can then
  * use to build the final query for the play result.
  */
-foreach ( $qualifiers as $qualifier ) {
+foreach ( $conditions as $condition ) {
 
-  $matches = false;
-
-  foreach ( $qualifier as $key => $value ) {
+  foreach ( $condition as $key => $value ) {
     
     if ( $input[$key] === $value ) {
       $matches = true; 
@@ -82,12 +88,12 @@ foreach ( $qualifiers as $qualifier ) {
   }    
 
   if ( $matches ) {
-    $qualifier_keys[] = array_keys( $qualifier );
-    // $qualifier_keys is a 2D array for now so we can easily test
+    $condition_keys[] = array_keys( $condition );
+    // $condition_keys is a 2D array for now so we can easily test
     // it by counting its length
     
     // We're turning off the break for now so we can see if we
-    // ever get more than one array in $qualifier_keys
+    // ever get more than one array in $condition_keys
 
     //break;
   }
@@ -95,18 +101,16 @@ foreach ( $qualifiers as $qualifier ) {
 }
 
 // TODO
-// we should have one array in $qualifier_keys;
+// we should have *zero or 1* array in $condition_keys;
 // we need to be make sure this is true
 
-print_r( $qualifier_keys );
-//print_r( count( $qualifier_keys ) );
+if ( count( $condition_keys ) <= 1 ) {
 
-if ( count( $qualifier_keys ) == 1 ) {
+  $q = null;
+  foreach ( $condition_keys as $condition_key ) {
 
-  foreach ( $qualifier_keys as $qualifier_key ) {
-
-    $q = '/qualifiers';
-    foreach ( $qualifier_key as $key ) {
+    $q = '/conditions';
+    foreach ( $condition_key as $key ) {
     
       $q .= "[@$key=\"{$input[$key]}\"]";
 
@@ -116,12 +120,12 @@ if ( count( $qualifier_keys ) == 1 ) {
   
 // example xpath with not()
 // we need the not()
-print_r( $board->xpath('//play[@val=9]/qualifiers[@against="c" and not(@two_outs|@zero_outs|@foo|@bar)]/result') ); die();
+//print_r( $board->xpath('//play[@val=9]/conditions[@against="c" and not(@two_outs|@zero_outs|@foo|@bar)]/result') ); die();
 
-  $xpath .= $q . '/result';
+  // add $q if it has a value
+  $xpath .= ( $q  ?  $q . '/result' : '/result' );
   echo $xpath . PHP_EOL;
 
 } else {
-  // debug
-  echo 'error in $qualifier_keys';
+  echo 'error in $condition_keys';
 }

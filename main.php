@@ -1,6 +1,7 @@
 <?php
 require_once 'inc/class-game-state.php';
 require_once 'inc/class-result.php';
+require_once 'vendor/oodle/krumo/class.krumo.php';
 
 $game_state = new GameState();
 
@@ -27,9 +28,10 @@ $game_state->play_it_safe = null;
 
 // get a random value to look up
 $possibles = array( 1, 9, 12, 14, 21, 29, 37 );
-$val = (string) rand( 0, count( $possibles ) - 1 );
+$val = ( string ) rand( 0, count( $possibles ) - 1 );
 
+echo $possibles[$val] . PHP_EOL;
 $result = new Result( $possibles[$val], $game_state );
-echo $result . PHP_EOL;
-
+//$result = new Result( 12, $game_state );
+k($result);
 ?>

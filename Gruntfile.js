@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'components/jade/',
           src: '**/*.jade',
-          dest: '.',
+          dest: 'boards/',
           ext: '.xml'
         }]
       }
