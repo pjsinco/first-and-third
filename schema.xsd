@@ -2,6 +2,18 @@
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="board" type="board_type" />
+  <xs:element name="play" type="play_type" />
+
+  <xs:complexType name="board_type">
+    <xs:all>
+      <xs:element ref="play" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="play_type">
+    
+  </xs:complexType>
+
 
 
 </xs:schema>
