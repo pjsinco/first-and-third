@@ -23,3 +23,33 @@
 
 ###2015-03-25
 * Tuts+: [PHP Exceptions](http://code.tutsplus.com/tutorials/php-exceptions--net-22274)
+
+###2015-03-26
+* [Run shell commands with grunt-shell](https://jonsuh.com/blog/take-grunt-to-the-next-level/#run-shell-commands-with-grunt-shell)
+    ```js
+    npm install grunt-shell --save-dev
+    ```
+
+    ```js
+    grunt.initConfig({
+      shell: {
+        options: {
+          stdout: true,
+          stderr: true
+        },
+        deploy: {
+          command: 'bundle exec cap production deploy'
+        }
+      },
+    });  
+    ```
+
+    ```js
+    grunt.registerTask('production', ['build', 'cssmin', 'uglify', 'shell:deploy']);
+    ```
+
+* Stack: [XML Schema (XSD) validation tool?](http://stackoverflow.com/questions/124865/xml-schema-xsd-validation-tool)
+    ```
+    xmllint --noout --schema XSD_FILE XML_FILE
+    ```
+* [XML schema example](http://cs.au.dk/~amoeller/XML/schemas/xmlschema-example.html)
