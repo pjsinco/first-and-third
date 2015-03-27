@@ -1,8 +1,8 @@
 <!ELEMENT board (play+)>
-<!ELEMENT play ((result | conditions*) result | fielding*)>
+<!ELEMENT play ((result, conditions*) | fielding*)>
 <!ELEMENT result EMPTY>
 <!ELEMENT conditions (result)>
-<!ELEMENT fielding (result | (result | conditions*))>
+<!ELEMENT fielding (result | conditions*)+>
 
 <!ATTLIST conditions 
   zero_outs (t|f) #IMPLIED
@@ -18,8 +18,6 @@
   on_3b_speed (n|f|s) #IMPLIED
   play_it_safe (t|f) #IMPLIED>
 
-
-
 <!ATTLIST result 
   state (0|1|2|3|4|5|6|7) #REQUIRED
   outs (0|1|2|3) #REQUIRED
@@ -27,16 +25,11 @@
   type CDATA #REQUIRED
   des CDATA #REQUIRED>
 
-
-
 <!ATTLIST play 
   val CDATA #REQUIRED>
 
 <!ATTLIST fielding 
   val (1|2|3) #REQUIRED>
-
-
-
 
 <!ATTLIST board 
   state (0|1|2|3|4|5|6|7) #REQUIRED>

@@ -113,7 +113,7 @@
       </conditions>
     </fielding>
     <fielding val="1">
-      <result f="1" des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat"/>
+      <result des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat"/>
       <conditions p_sym="x">
         <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat"/>
       </conditions>
