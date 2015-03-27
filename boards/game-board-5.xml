@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?><!DOCTYPE board SYSTEM "board.dtd">
 <board state="5">
   <play val="1">
     <result des="HOMERUN over left field fence" outs="0" runs="3" state="0" type="atbat"/>
@@ -139,24 +139,21 @@
       <result des="Runner on first out stealing 2nd; A-C PO-SS; other holds" outs="1" runs="0" state="4" type="action"/>
     </fielding>
   </play>
-  <play val="">
-    <fielding val="3">
-      <result des="" outs="" runs="" state="" type=""/>
-      <conditions>
-        <result des="" outs="" runs="" state="" type=""/>
-      </conditions>
-    </fielding>
-    <fielding val="2">
-      <result des="" outs="" runs="" state="" type=""/>
-      <conditions>
-        <result des="" outs="" runs="" state="" type=""/>
-      </conditions>
-    </fielding>
-    <fielding val="1">
-      <result des="" outs="" runs="" state="" type=""/>
-      <conditions>
-        <result des="" outs="" runs="" state="" type=""/>
-      </conditions>
-    </fielding>
-  </play>
 </board>
+<!--  play(val="")-->
+<!--    fielding(val="3")-->
+<!--      result(des="" outs="" runs="" state="" type="")/-->
+<!--      conditions()-->
+<!--        result(des="" outs="" runs="" state="" type="")/-->
+<!--      -->
+<!--    -->
+<!--    fielding(val="2")-->
+<!--      result(des="" outs="" runs="" state="" type="")/-->
+<!--      conditions()-->
+<!--        result(des="" outs="" runs="" state="" type="")/-->
+<!--      -->
+<!--    -->
+<!--    fielding(val="1")-->
+<!--      result(des="" outs="" runs="" state="" type="")/-->
+<!--      conditions()-->
+<!--        result(des="" outs="" runs="" state="" type="")/-->
