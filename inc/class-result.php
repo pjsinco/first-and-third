@@ -10,10 +10,10 @@ class Result {
 
   private $game_state;
   private $board_val;
-  private $conditions = array(); // 2D array
-  private $condition_keys = array();
-  private $board;
-  private $xpath;
+  //private $conditions = array(); // 2D array
+  //private $condition_keys = array();
+  private $board_xml;
+  //private $xpath;
   public $des;
   public $outs;
   public $runs;
@@ -25,37 +25,68 @@ class Result {
    */
   public function __construct( $board_val, $game_state ) {
 
-    // TODO break these out
     $this->game_state = $game_state;
     $this->board_val = (string) $board_val;
-    $this->board = simplexml_load_file( 'boards/game-board-5.xml' );
-    $this->xpath = $this->format_xpath( $board_val );
-    $this->conditions = $this->fetch_conditions();
-    $this->condition = $this->fetch_conditions();
-    $this->condition_keys = $this->isolate_condition_keys();
-    $this->get_xpath_for_result();
+    $this->board_xml = simplexml_load_file( 'boards/game-board-5.xml' );
 
-    $this->get_result();
+    $this->fetch_result( $board_val, $game_state );
   }
     
+  private function fetch_result( $board_val, $game_state ) {
+
+    $xpath = $this->format_xpath( $board_val );
+
+    $conditions = $this->fetch_conditions( $xpath );
+
+    $condition_keys = $this->isolate_condition_keys( $conditions );
+
+    $xpath_final = $this->get_xpath_for_result( $xpath, $condition_keys );
+
+    $result_xml = $this->board_xml->xpath( $xpath_final );
+
+    $attrs = $this->get_result_attrs( $result_xml );
+
+    $this->set_result_attrs( $attrs );
+
+  }
+
+  private function get_result_attrs( $result_xml ) {
+
+    $attrs = (array) $result_xml[0]->attributes();
+
+    return array(
+      'des'   => $attrs['@attributes']['des'],
+      'outs'  => $attrs['@attributes']['outs'],
+      'runs'  => $attrs['@attributes']['runs'],
+      'state' => $attrs['@attributes']['state'],
+      'type ' => $attrs['@attributes']['type'],
+    );
+  }
+
+  private function set_result_attrs( $attrs ) {
+
+      foreach ($attrs as $key => $value) {
+        $this->{$key} = $value;
+      }
+  }
+
   public function __toString() {
     
 
   }
 
-  private function format_xpath( ) {
-
+  private function format_xpath( $board_val ) {
     $xpath = sprintf(
       '//play[@val=%1$s]/fielding[@val=%2$s]',
-      $this->board_val, $this->game_state->fielding
+      $board_val, $this->game_state->fielding
     );
 
     return $xpath;
   }
 
-  private function fetch_conditions() {
+  private function fetch_conditions( $xpath ) {
 
-    $conds_avail = $this->board->xpath( $this->xpath );
+    $conds_avail = $this->board_xml->xpath( $xpath );
     $conditions = array();
 
     if ( $conds_avail ) {
@@ -85,11 +116,11 @@ class Result {
    * which we can then use to build the final query for 
    * the play result.
    */
-  private function isolate_condition_keys() {
+  private function isolate_condition_keys( $conditions ) {
 
     $condition_keys = array();
     
-    foreach ( $this->conditions as $condition ) {
+    foreach ( $conditions as $condition ) {
 
       foreach ( $condition as $key => $value ) {
 
@@ -118,14 +149,14 @@ class Result {
     return $condition_keys;
   }
 
-  public function get_xpath_for_result() {
+  public function get_xpath_for_result( $xpath, $condition_keys ) {
 
     // TODO
-    if ( count( $this->condition_keys <= 1 ) ) {
+    if ( count( $condition_keys <= 1 ) ) {
 
       $q= null;
 
-      foreach ($this->condition_keys as $condition_key) {
+      foreach ($condition_keys as $condition_key) {
         $q = '/conditions';
         foreach ( $condition_key as $key ) {
           $q .= "[@$key=\"{$this->game_state->$key}\"]";
@@ -133,23 +164,11 @@ class Result {
       }
     }
 
-    $this->xpath .= ( $q  ?  $q . '/result' : '/result' );
-    k($this->xpath);
+    $xpath .= ( $q  ?  $q . '/result' : '/result' );
+    k($xpath);
+    return $xpath;
   }
 
-  private function get_result() {
-    $result = $this->board->xpath( $this->xpath );
-
-    $atts = (array) $result[0]->attributes();
-
-    $this->des = $atts['@attributes']['des'];
-    $this->outs = $atts['@attributes']['outs'];
-    $this->runs = $atts['@attributes']['runs'];
-    $this->state = $atts['@attributes']['state'];
-    $this->type = $atts['@attributes']['type'];
-
-    k($this->des);
-  }
 
 } // eoc
 ?>
