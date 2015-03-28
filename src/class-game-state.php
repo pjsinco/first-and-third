@@ -42,6 +42,10 @@ class GameState {
 
   }
 
+  public function get_fielding() {
+    return $this->fielding;
+  }
+
   public function __get( $prop ) {
     if ( property_exists( 'GameState', $prop ) ) {
       return $this->$prop;

@@ -57,5 +57,6 @@
 ###2015-03-28
 * Tuts+: [Mockery: A Better Way](http://code.tutsplus.com/tutorials/mockery-a-better-way--net-28097)
 
+* Sitepoint: [Mock your Test Dependencies with Mockery](http://www.sitepoint.com/mock-test-dependencies-mockery/)
 
 
