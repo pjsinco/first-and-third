@@ -1,6 +1,6 @@
 <?php
-require_once 'inc/class-game-state.php';
-require_once 'inc/class-result.php';
+require_once 'src/class-game-state.php';
+require_once 'src/class-result.php';
 require_once 'vendor/oodle/krumo/class.krumo.php';
 
 $game_state = new GameState();

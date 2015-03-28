@@ -10,10 +10,7 @@ class Result {
 
   private $game_state;
   private $board_val;
-  //private $conditions = array(); // 2D array
-  //private $condition_keys = array();
   private $board_xml;
-  //private $xpath;
   public $des;
   public $outs;
   public $runs;

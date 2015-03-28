@@ -1,4 +1,5 @@
-<phpunit verbose="true" colors="true" bootstrap="tests/bootstrap.php">
+<!-- <phpunit verbose="true" colors="true" bootstrap="tests/bootstrap.php"> -->
+<phpunit verbose="true" colors="true">
   <testsuites>
     <testsuite name="First and Third Test Suite">
       <directory prefix="test-" suffix=".php">./tests</directory>
