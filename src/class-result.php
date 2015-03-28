@@ -8,6 +8,7 @@
  */
 class Result {
 
+  const FIELDING_PHASE_START = 12 ;
   private $game_state;
   private $board_val;
   private $board_xml;
@@ -21,34 +22,43 @@ class Result {
    * 
    */
   public function __construct( $board_val, $game_state ) {
-
     $this->game_state = $game_state;
     $this->board_val = (string) $board_val;
     $this->board_xml = simplexml_load_file( 'boards/game-board-5.xml' );
 
     $this->fetch_result( $board_val, $game_state );
   }
+
+  private function is_fielding_phase( $board_val ) {
+  
+    return $board_val >= self::FIELDING_PHASE_START;
+  }
     
   private function fetch_result( $board_val, $game_state ) {
-
     $xpath = $this->format_xpath( $board_val );
-
     $conditions = $this->fetch_conditions( $xpath );
-
     $condition_keys = $this->isolate_condition_keys( $conditions );
-
     $xpath_final = $this->get_xpath_for_result( $xpath, $condition_keys );
-
     $result_xml = $this->board_xml->xpath( $xpath_final );
-
     $attrs = $this->get_result_attrs( $result_xml );
-
     $this->set_result_attrs( $attrs );
+  }
 
+  private function format_xpath( $board_val ) {
+
+    if ( $this->is_fielding_phase( $board_val ) ) {
+      $xpath = sprintf(
+        '//play[@val=%1$s]/fielding[@val=%2$s]',
+        $board_val, $this->game_state->get_fielding()
+      );
+    } else { // we're in eh hitt
+      $xpath = sprintf( '//play[@val=%1$s]', $board_val );
+    }
+
+    return $xpath;
   }
 
   private function get_result_attrs( $result_xml ) {
-
     $attrs = (array) $result_xml[0]->attributes();
 
     return array(
@@ -56,48 +66,34 @@ class Result {
       'outs'  => $attrs['@attributes']['outs'],
       'runs'  => $attrs['@attributes']['runs'],
       'state' => $attrs['@attributes']['state'],
-      'type ' => $attrs['@attributes']['type'],
+      'type' => $attrs['@attributes']['type'],
     );
   }
 
   private function set_result_attrs( $attrs ) {
-
-      foreach ($attrs as $key => $value) {
-        $this->{$key} = $value;
-      }
+    foreach ($attrs as $key => $value) {
+      $this->{$key} = $value;
+    }
   }
 
-  public function __toString() {
-    
-
-  }
-
-  private function format_xpath( $board_val ) {
-    $xpath = sprintf(
-      '//play[@val=%1$s]/fielding[@val=%2$s]',
-      $board_val, $this->game_state->fielding
-    );
-
-    return $xpath;
-  }
-
+  /**
+   * Find all possible conditions for this play.
+   *
+   * @return 2D array of conditions sets
+   */
   private function fetch_conditions( $xpath ) {
-
     $conds_avail = $this->board_xml->xpath( $xpath );
     $conditions = array();
 
     if ( $conds_avail ) {
       foreach ($conds_avail[0] as $condition ) {
-
         // make sure we've got a <conditions> elem
         if ( $condition->getName() == 'conditions' ) {
-
           // get an array of attrs of this <conditions> elem
           $atts = (array) $condition->attributes();
 
           // store them in our array
           $conditions[] = $atts['@attributes'];
-
         }
       }
     }
@@ -114,7 +110,6 @@ class Result {
    * the play result.
    */
   private function isolate_condition_keys( $conditions ) {
-
     $condition_keys = array();
     
     foreach ( $conditions as $condition ) {
@@ -146,8 +141,7 @@ class Result {
     return $condition_keys;
   }
 
-  public function get_xpath_for_result( $xpath, $condition_keys ) {
-
+  private function get_xpath_for_result( $xpath, $condition_keys ) {
     // TODO
     if ( count( $condition_keys <= 1 ) ) {
 
@@ -162,9 +156,11 @@ class Result {
     }
 
     $xpath .= ( $q  ?  $q . '/result' : '/result' );
-    k($xpath);
+    //k($xpath);
     return $xpath;
   }
+
+  public function __toString() { }
 
 
 } // eoc
