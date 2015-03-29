@@ -1,7 +1,7 @@
 <?php
 
 require './vendor/autoload.php';
-require 'src/class-result.php';
+require 'libraries/Result.php';
 use \Mockery as m;
 
 class Test_Result extends PHPUnit_Framework_TestCase
