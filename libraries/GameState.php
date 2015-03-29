@@ -2,11 +2,14 @@
 
 /**
  * GameState
+ * Maintains a snapshop of current all game conditions
  *
  * @package First and Third
  * @author Patrick Sinco
  */
 class GameState {
+
+  private $scorecard;
 
   // game
   private $outs;
@@ -38,12 +41,44 @@ class GameState {
   private $play_it_safe;
 
 
-  public function __construct() {
+  //public function __construct( $inning, $half, $home_team_runs, $away_team_runs ) {
+  public function __construct( $scorecard, $args = array() ) {
 
+    extract( $args );
+
+    $this->scorecard = $scorecard;
+    $this->outs = ( $outs ? $outs : 0) ;
+    $this->inning = $scorecard->inning; // todo needed?
+    $this->half = $scorecard->half; // todo needed?
+    $this->bases = ( $bases ? $bases : 0 );
+    $this->zero_outs = $this->has_zero_outs();
+    $this->two_outs = $this->has_two_outs();
+    $this->home_team_runs = $scorecard->home_team_runs;
+    $this->away_team_runs = $scorecard->away_team_runs;
+    $this->p_sym = $scorecard->pitcher->p_sym;
+    $this->against = $scorecard->pitcher->grade;
+    $this->infield = ( $infield ? $infield : 'c' );
+    $this->fielding = $scorecard->defense->get_fielding();
+    $this->double_cols = $scorecard->at_bat->double_cols;
+    $this->star14 = $scorecard->at_bat->star_14;
+    $this->batter_speed = $scorecard->batter;
+    $this->on_1b_speed = $scorecard->on_1b->speed;
+    $this->on_2b_speed = $scorecard->on_2b->speed;
+    $this->on_3b_speed = $scorecard->on_3b->speed;
+    $this->play_it_safe = false;
   }
 
+  // todo needed?
   public function get_fielding() {
     return $this->fielding;
+  }
+
+  public function has_zero_outs() {
+    // body...
+  }
+
+  public function has_two_outs() {
+    // body...
   }
 
   public function __get( $prop ) {

@@ -1,46 +1,49 @@
 <?php
 
+require_once 'libraries/BoardGame.php';
+
 /**
  * 
  */
 class Game
 {
-  public $home_team;
-  public $away_team;
-  //public $home_team_runs;
-  //public $away_team_runs;
-  //public $home_id;
-  //public $away_id;
+  public $home;
+  public $away;
   public $venue_name;
-  //public $venue_id;
-  public $game_date;
-  //public $home_wins;
-  //public $away_wins;
-  //public $home_losses;
-  //public $away_losses;
   public $linescore;
-  public $scorecard;
-  public $game_over;
+  public $game_result;
+  public $board_game;
 
   /**
    * 
    */
-  public function __construct( $away_team, $home_team ) {
-    $this->home_team = $home_team;
-    $this->away_team = $away_team;
-    $this->scorecard = new Scorecard( $away_team, $home_team );
-    $this->game_over = false;
+  public function __construct( $away, $home, $venue_name ) {
+    $this->home = $home;
+    $this->away = $away;
+    $this->venue_name = $venue_name;
+    //$this->scorecard = new Scorecard( $this );
+    $this->board_game = new BoardGame( $this );
   }
 
   public function play_game() {
-    while ( $this->game_over ) {
-      $this->scorecard->play();
+
+    $this->board_game->play();
+
+    return $this->board_game;
+  }
+
+  public function __get( $prop ) {
+    if ( property_exists( 'Game', $prop ) ) {
+      return $this->$prop;
     }
   }
 
-  public function game_over() {
-    return $this->game_over;
+  public function __set( $prop, $val ) {
+    if ( property_exists( 'Game', $prop ) ) {
+      $this->$prop = $val;
+    }
   }
-}
+
+} // eoc
 
 ?>
