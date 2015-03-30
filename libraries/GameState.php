@@ -12,10 +12,12 @@ class GameState {
   private $scorecard;
 
   // game
-  private $outs;
   private $inning;
   private $half;
   private $bases;
+  private $balls;
+  private $strikes;
+  private $outs;
   private $zero_outs;
   private $two_outs;
   private $home_team_runs;
