@@ -59,4 +59,5 @@
 
 * Sitepoint: [Mock your Test Dependencies with Mockery](http://www.sitepoint.com/mock-test-dependencies-mockery/)
 
-
+###2015-03-31
+* ```xmllint --noout --dtdvalid boards/board.dtd boards/game-board-5.xml```

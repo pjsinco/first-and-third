@@ -20,10 +20,16 @@
 
 <!ATTLIST result 
   state (0|1|2|3|4|5|6|7) #REQUIRED
+  batter (to_1b|to_2b|to_3b_|to_home|out|out_at_1b|out_at_2b|out_at_3b|out_at_home|inning_over|atbat) #IMPLIED
+  on_1b (hold|to_2b|to_3b|to_home|out_at_1b|out_at_2b|out_at_3b|out_at_home|inning_over) #IMPLIED
+  on_2b (hold|to_3b|to_home|out_at_2b|out_at_3b|out_at_home|inning_over) #IMPLIED
+  on_3b (hold|to_home|out_at_3b|out_at_home|inning_over) #IMPLIED
   outs (0|1|2|3) #REQUIRED
   runs (0|1|2|3|4) #REQUIRED
-  type CDATA #REQUIRED
-  des CDATA #REQUIRED>
+  type (atbat|action) #REQUIRED
+  des CDATA #REQUIRED
+  weird (t|f) #IMPLIED
+  event CDATA #REQUIRED>
 
 <!ATTLIST play 
   val CDATA #REQUIRED>
