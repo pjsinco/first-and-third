@@ -1,142 +1,142 @@
 <?xml version="1.0" encoding="utf-8" ?><!DOCTYPE board SYSTEM "board.dtd">
 <board state="5">
   <play val="1">
-    <result des="HOMERUN over left field fence" outs="0" runs="3" state="0" type="atbat" batter="to_home" on_1b="to_home" on_3b="to_home"/>
+    <result des="HOMERUN over left field fence" outs="0" runs="3" state="0" type="atbat" batter="to_home" on_1b="to_home" on_3b="to_home" event="event"/>
   </play>
   <play val="9">
-    <result des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="to_home"/>
+    <result des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="to_home" event="event"/>
     <conditions two_outs="t">
-      <result des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat" batter="to_1b" on_1b="to_3b" on_3b="to_home"/>
+      <result des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat" batter="to_1b" on_1b="to_3b" on_3b="to_home" event="event"/>
     </conditions>
     <conditions against="c">
-      <result des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="to_home"/>
+      <result des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="to_home" event="event"/>
     </conditions>
     <conditions against="c" two_outs="t">
-      <result des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat" batter="to_1b" on_1b="to_3b" on_3b="to_home"/>
+      <result des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat" batter="to_1b" on_1b="to_3b" on_3b="to_home" event="event"/>
     </conditions>
     <conditions against="b"> 
-      <result des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="to_home"/>
+      <result des="SINGLE over short; one runner scores; other to second" outs="0" runs="1" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="to_home" event="event"/>
     </conditions>
     <conditions against="b" two_outs="t">
-      <result des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat" batter="to_1b" on_1b="to_3b" on_3b="to_home"/>
+      <result des="SINGLE over short; one runner scores; other to third" outs="0" runs="1" state="5" type="atbat" batter="to_1b" on_1b="to_3b" on_3b="to_home" event="event"/>
     </conditions>
     <conditions against="a"> 
-      <result des="Fly out; one runner scores; PO-LF" outs="1" runs="1" state="1" type="atbat" batter="out" on_1b="hold" on_3b="to_home"/>
+      <result des="Fly out; one runner scores; PO-LF" outs="1" runs="1" state="1" type="atbat" batter="out" on_1b="hold" on_3b="to_home" event="event"/>
     </conditions>
     <conditions against="a" two_outs="t">
-      <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold"></result>
+      <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold" event="event"></result>
     </conditions>
   </play>
   <play val="12">
     <fielding val="3">
       <conditions infield="c">
-        <result des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="out_at_home"/>
+        <result des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="out_at_home" event="event"/>
       </conditions>
       <conditions infield="d" zero_outs="t">
-        <result des="Double play; A-1B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="to_home"/>
+        <result des="Double play; A-1B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="to_home" event="event"/>
       </conditions>
       <conditions infield="d" zero_outs="f">
-        <result des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="hold"/>
+        <result des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="hold" event="event"/>
       </conditions>
       <conditions infield="d" two_outs="t">
-        <result des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="inning_over" on_3b="inning_over"/>
+        <result des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="inning_over" on_3b="inning_over" event="event"/>
       </conditions>
     </fielding>
     <fielding val="2">
       <conditions infield="c">
-        <result des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="out_at_home"/>
+        <result des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="out_at_home" event="event"/>
       </conditions>
       <conditions infield="d" zero_outs="t">
-        <result des="Double play; A-1B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="to_home"/>
+        <result des="Double play; A-1B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="to_home" event="event"/>
       </conditions>
       <conditions infield="d" zero_outs="f">
-        <result des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="hold"/>
+        <result des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="hold" event="event"/>
       </conditions>
       <conditions infield="d" two_outs="t">
-        <result des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="hold"/>
+        <result des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="hold" event="event"/>
       </conditions>
     </fielding>
     <fielding val="1">
       <conditions infield="c">
-        <result des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="out_at_home"/>
+        <result des="Safe at first; F.C.; runner out at home; other to second; A-2B PO-C" outs="1" runs="0" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="out_at_home" event="event"/>
       </conditions>
       <conditions infield="d" zero_outs="t">
-        <result des="Double play; A-2B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="to_home"/>
+        <result des="Double play; A-2B PO-SS A-SS PO-1B; runner on third scores" outs="2" runs="1" state="0" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="to_home" event="event"/>
       </conditions>
       <conditions infield="d" zero_outs="f">
-        <result des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="hold"/>
+        <result des="Double play; A-1B PO-SS A-SS PO-1B" outs="2" runs="0" state="4" type="atbat" batter="out_at_1b" on_1b="out_at_2b" on_3b="hold" event="event"/>
       </conditions>
       <conditions infield="d" two_outs="t">
-        <result des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="inning_over" on_3b="inning_over"/>
+        <result des="Groundout; A-1B PO-P" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="inning_over" on_3b="inning_over" event="event"/>
       </conditions>
     </fielding>
   </play>
   <play val="14">
     <fielding val="1">
-      <result des="Base on balls, filling the bases" outs="0" runs="0" state="7" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="hold"/>
+      <result des="Base on balls, filling the bases" outs="0" runs="0" state="7" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="hold" event="event"/>
     </fielding>
     <fielding val="2">
-      <result des="Base on balls, filling the bases" outs="0" runs="0" state="7" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="hold"/>
+      <result des="Base on balls, filling the bases" outs="0" runs="0" state="7" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="hold" event="event"/>
     </fielding>
     <fielding val="3">
-      <result des="Base on balls, filling the bases" outs="0" runs="0" state="7" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="hold"/>
+      <result des="Base on balls, filling the bases" outs="0" runs="0" state="7" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="hold" event="event"/>
     </fielding>
   </play>
   <play val="21">
     <fielding val="3">
       <conditions two_outs="t">
-        <result des="Strikeout; catcher drops third strike; one runner scores; other to second; batter to first; passed ball" outs="0" runs="1" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="to_home"/>
+        <result des="Strikeout; catcher drops third strike; one runner scores; other to second; batter to first; passed ball" outs="0" runs="1" state="3" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="to_home" event="event"/>
       </conditions>
-      <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold"/>
+      <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold" event="event"/>
     </fielding>
     <fielding val="2">
       <conditions two_outs="t">
-        <result des="Strikeout; catcher drops third strike; batter safe at first, filling the bases; passed ball" outs="0" runs="0" state="7" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="hold"/>
+        <result des="Strikeout; catcher drops third strike; batter safe at first, filling the bases; passed ball" outs="0" runs="0" state="7" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="hold" event="event"/>
       </conditions>
-      <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold"/>
+      <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold" event="event"/>
     </fielding>
     <fielding val="1">
-      <result des="Ball; catcher throws wild to third; one runner scores; other to second; E-C" outs="0" runs="1" state="2" type="action" batter="atbat" on_1b="to_2b" on_3b="to_home"/>
+      <result des="Ball; catcher throws wild to third; one runner scores; other to second; E-C" outs="0" runs="1" state="2" type="action" batter="atbat" on_1b="to_2b" on_3b="to_home" event="event"/>
     </fielding>
   </play>
   <play val="29">
     <fielding val="3">
-      <result des="Out at first; runner to second; other holds" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="hold"/>
+      <result des="Out at first; runner to second; other holds" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="hold" event="event"/>
       <conditions p_sym="x">
-        <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold"/>
+        <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold" event="event"/>
       </conditions>
     </fielding>
     <fielding val="2">
-      <result des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="hold"/>
+      <result des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="hold" event="event"/>
       <conditions p_sym="x">
-        <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold"/>
+        <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold" event="event"/>
       </conditions>
     </fielding>
     <fielding val="1">
-      <result des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="hold"/>
+      <result des="Out at first; runner to second; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="hold" event="event"/>
       <conditions p_sym="x">
-        <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold"/>
+        <result des="Strikeout; PO-C" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold" event="event"/>
       </conditions>
     </fielding>
   </play>
   <play val="37">
     <fielding val="3">
       <conditions on_1b_speed="s">
-        <result des="Runner on first holds" outs="0" runs="0" state="5" type="action" batter="atbat" on_1b="hold" on_3b="hold" weird="t"/>
+        <result des="Runner on first holds" outs="0" runs="0" state="5" type="action" batter="atbat" on_1b="hold" on_3b="hold" weird="t" event="event"/>
       </conditions>
-      <result des="Runner on first steals second; other holds third" outs="0" runs="0" state="6" type="action" batter="atbat" on_1b="to_2b" on_3b="hold"/>
+      <result des="Runner on first steals second; other holds third" outs="0" runs="0" state="6" type="action" batter="atbat" on_1b="to_2b" on_3b="hold" event="event"/>
     </fielding>
     <fielding val="2">
       <conditions two_outs="t">
-        <result des="Runner on first out stealing 2nd; A-C PO-SS" outs="1" runs="0" state="4" type="action" event="caught stealing 2b" batter="atbat" on_1b="out_at_2b" on_3b="inning_over"/>
+        <result des="Runner on first out stealing 2nd; A-C PO-SS" outs="1" runs="0" state="4" type="action" event="caught_stealing_2b" batter="atbat" on_1b="out_at_2b" on_3b="inning_over"/>
       </conditions>
-      <result des="Runner on first out stealing 2nd; A-C PO-SS; other scores" outs="1" runs="1" state="0" type="action" event="caught stealing 2b" batter="at_bat" on_1b="out_at_2b" on_3b="to_home"/>
+      <result des="Runner on first out stealing 2nd; A-C PO-SS; other scores" outs="1" runs="1" state="0" type="action" event="caught_stealing_2b" batter="atbat" on_1b="out_at_2b" on_3b="to_home"/>
     </fielding>
     <fielding val="1">
       <conditions two_outs="t">
-        <result des="Runner on first out stealing 2nd" outs="1" runs="0" state="4" type="action" event="caught stealing 2b" batter="atbat" on_1b="out_at_2b" on_3b="inning_over"/>
+        <result des="Runner on first out stealing 2nd" outs="1" runs="0" state="4" type="action" event="caught_stealing_2b" batter="atbat" on_1b="out_at_2b" on_3b="inning_over"/>
       </conditions>
-      <result des="Runner on first out stealing 2nd; A-C PO-SS; other holds" outs="1" runs="0" state="4" type="action" event="caught stealing 2b" batter="atbat" on_1b="out_at_2b" on_3b="hold"/>
+      <result des="Runner on first out stealing 2nd; A-C PO-SS; other holds" outs="1" runs="0" state="4" type="action" event="caught_stealing_2b" batter="atbat" on_1b="out_at_2b" on_3b="hold"/>
     </fielding>
   </play>
 </board>
