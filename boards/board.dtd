@@ -1,5 +1,5 @@
 <!ELEMENT board (play+)>
-<!ELEMENT play ((result, conditions*) | fielding*)>
+<!ELEMENT play ((result*, conditions*) | fielding*)>
 <!ELEMENT result EMPTY>
 <!ELEMENT conditions (result)>
 <!ELEMENT fielding (result | conditions*)+>
@@ -19,19 +19,22 @@
   play_it_safe (t|f) #IMPLIED>
 
 <!ATTLIST result 
-  state (0|1|2|3|4|5|6|7) #REQUIRED
-  batter (to_1b|to_2b|to_3b_|to_home|out|out_at_1b|out_at_2b|out_at_3b|out_at_home|inning_over|atbat) #IMPLIED
+  state (0|1|2|3|4|5|6|7|inning_over) #REQUIRED
+  batter (to_1b|to_2b|to_3b|to_home|out|out_at_1b|out_at_2b|out_at_3b|out_at_home|inning_over|atbat) #IMPLIED
   on_1b (hold|to_2b|to_3b|to_home|out_at_1b|out_at_2b|out_at_3b|out_at_home|inning_over) #IMPLIED
   on_2b (hold|to_3b|to_home|out_at_2b|out_at_3b|out_at_home|inning_over) #IMPLIED
   on_3b (hold|to_home|out_at_3b|out_at_home|inning_over) #IMPLIED
   outs (0|1|2|3) #REQUIRED
   runs (0|1|2|3|4) #REQUIRED
+  rbi (1|2|3|4) #IMPLIED
   type (atbat|action) #REQUIRED
   des CDATA #REQUIRED
   weird (t|f) #IMPLIED
   charge_ab (t|f|na) #REQUIRED
-  event (strikeout|lineout|groundout|flyout|pop_out|sac_fly|forceout|grounded_into_dp|sac_bunt|bunt_groundout|runner_out|single|double|triple|homerun|walk|hit_by_pitch|dropped_third_strike|
-    caught_stealing_2b|caught_stealing_3b|caught_stealing_home|stolen_base_2b|stolen_base_3b|stolen_base_home|wild_pitch|
+  s (1) #IMPLIED
+  b (1) #IMPLIED
+  event (strikeout|lineout|groundout|flyout|pop_out|foul_out|sac_fly|forceout|grounded_into_dp|sac_bunt|bunt_groundout|runner_out|single|double|triple|homerun|walk|hit_by_pitch|dropped_third_strike|lined_into_dp|grounded_into_tp|lined_into_tp|
+    caught_stealing_2b|caught_stealing_3b|caught_stealing_home|stolen_base_2b|stolen_base_3b|stolen_base_home|wild_pitch|double_steal_2b_3b|double_steal_2b_home|double_steal_3b_home|picked_off_1b|picked_off_2b|picked_off_3b|doubled_off_1b|doubled_off_2b|doubled_off_3b|
     pitching_substitution|defensive_switch|defensive_substitution|offensive_substitution) #REQUIRED>
 
 <!ATTLIST play 
