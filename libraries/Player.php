@@ -8,6 +8,7 @@ class Player
   
   public $double_cols;
   public $star_14;
+  public $has_11;
   public $speed;
   public $bats;
   public $throws;
