@@ -65,3 +65,14 @@
 ###2015-03-31
 * ```xmllint --noout --dtdvalid boards/board.dtd boards/game-board-5.xml```
 
+###2015-04-04
+* [Retrosheet.org](http://www.retrosheet.org)
+
+* Github [Python scripts for Retrosheet data downloading and parsing](https://github.com/wellsoliver/py-retrosheet) 
+
+* [Chadwick: Software Tools for Game-Level Baseball Data](http://chadwick.sourceforge.net/doc/index.html) 
+    * [event descriptors](http://chadwick.sourceforge.net/doc/cwevent.html)
+
+* [Building a Retrosheet Database – Part 1](http://www.techgraphs.com/building-a-retrosheet-database-part-1/)
+
+
