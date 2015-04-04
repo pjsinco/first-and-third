@@ -75,4 +75,7 @@
 
 * [Building a Retrosheet Database – Part 1](http://www.techgraphs.com/building-a-retrosheet-database-part-1/)
 
+* [96 variables on a play](http://www.pitchbypitch.com/2009/01/09/an-introduction-to-retrosheets-beventexe-software/)
+
+* A Retrosheet event parser in python: [see link for parseretrosheet.py](http://gregstoll.dyndns.org/~gregstoll/baseball/stats.php)
 
