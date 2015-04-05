@@ -1,0 +1,30 @@
+id,DET201406150
+version,2
+info,visteam,MIN
+info,hometeam,DET
+info,site,DET05
+info,date,2014/06/15
+info,number,0
+start,santd001,"Danny Santana",0,1,6
+start,mauej001,"Joe Mauer",0,2,3
+start,dozib001,"Brian Dozier",0,3,4
+start,willj004,"Josh Willingham",0,4,7
+start,morak001,"Kendrys Morales",0,5,10
+start,arcio001,"Oswaldo Arcia",0,6,9
+start,suzuk001,"Kurt Suzuki",0,7,2
+start,fulds001,"Sam Fuld",0,8,8
+start,escoe001,"Eduardo Escobar",0,9,5
+start,nolar001,"Ricky Nolasco",0,0,1
+start,kinsi001,"Ian Kinsler",1,1,4
+start,huntt001,"Torii Hunter",1,2,9
+start,cabrm001,"Miguel Cabrera",1,3,3
+start,martv001,"Victor Martinez",1,4,10
+start,martj006,"J.D. Martinez",1,5,7
+start,jacka001,"Austin Jackson",1,6,8
+start,castn001,"Nick Castellanos",1,7,5
+start,avila001,"Alex Avila",1,8,2
+start,suare001,"Eugenio Suarez",1,9,6
+start,porcr001,"Rick Porcello",1,0,1
+play,1,0,santd001,01,CX,43/G+
+play,1,0,mauej001,02,CFX,43/G
+

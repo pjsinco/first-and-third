@@ -65,7 +65,7 @@
 ###2015-03-31
 * ```xmllint --noout --dtdvalid boards/board.dtd boards/game-board-5.xml```
 
-###2015-04-04
+###2015-04-03
 * [Retrosheet.org](http://www.retrosheet.org)
 
 * Github [Python scripts for Retrosheet data downloading and parsing](https://github.com/wellsoliver/py-retrosheet) 
@@ -79,3 +79,24 @@
 
 * A Retrosheet event parser in python: [see link for parseretrosheet.py](http://gregstoll.dyndns.org/~gregstoll/baseball/stats.php)
 
+###2015-04-04
+* [Let's Build a Compiler, by Jack Crenshaw](http://compilers.iecc.com/crenshaw/)
+    ```
+    This fifteen-part series, written from 1988 to 1995, is a non-technical introduction to compiler construction. 
+    ```
+
+* Github: [An ANTLR context-free grammar for parsing Retrosheet event fields.](https://github.com/jeffreyolchovy/retrosheet)
+
+* Retrosheet: [The event file](http://www.retrosheet.org/eventfile.htm#5)
+    * STAR STAR STAR
+
+* Video: [Building a Retrosheet Database — Part 3 (The Easy/Mac Way)](http://www.techgraphs.com/building-a-retrosheet-database-part-3-the-easymac-way/)
+
+* Stack: [How to parse a CSV file using PHP](http://stackoverflow.com/questions/9139202/how-to-parse-a-csv-file-using-php)
+    ```php
+    $csvFile = file('../somefile.csv');
+    $data = [];
+    foreach ($csvFile as $line) {
+        $data[] = str_getcsv($line);
+    }
+    ```
