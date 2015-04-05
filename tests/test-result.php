@@ -12,7 +12,7 @@ class Test_Result extends PHPUnit_Framework_TestCase
   }
 
   /**
-   * Help us test a private or protected method
+   * With this, we can test a private or protected method
    *
    */
   public function invokeMethod( 
