@@ -1,0 +1,47 @@
+id,CLE201404040
+version,2
+info,visteam,MIN
+info,hometeam,CLE
+info,site,CLE08
+info,date,2014/04/04
+info,number,0
+info,starttime,5:18PM
+info,daynight,night
+info,usedh,true
+info,umphome,conrc901
+info,ump1b,bakej902
+info,ump2b,mealj901
+info,ump3b,emmep901
+info,howscored,park
+info,pitches,pitches
+info,temp,46
+info,winddir,ltor
+info,windspeed,32
+info,fieldcond,unknown
+info,precip,unknown
+info,sky,overcast
+info,timeofgame,181
+info,attendance,41274
+info,wp,outmj001
+info,lp,pelfm001
+info,save,
+start,dozib001,"Brian Dozier",0,1,4
+start,mauej001,"Joe Mauer",0,2,3
+start,willj004,"Josh Willingham",0,3,7
+start,colac001,"Chris Colabello",0,4,10
+start,plout001,"Trevor Plouffe",0,5,5
+start,arcio001,"Oswaldo Arcia",0,6,9
+start,suzuk001,"Kurt Suzuki",0,7,2
+start,hicka001,"Aaron Hicks",0,8,8
+start,florp001,"Pedro Florimon",0,9,6
+start,pelfm001,"Mike Pelfrey",0,0,1
+start,morgn001,"Nyjer Morgan",1,1,8
+start,swisn001,"Nick Swisher",1,2,3
+start,kipnj001,"Jason Kipnis",1,3,4
+start,santc002,"Carlos Santana",1,4,5
+start,branm003,"Michael Brantley",1,5,7
+start,cabra002,"Asdrubal Cabrera",1,6,6
+start,murpd005,"David Murphy",1,7,9
+start,gomey001,"Yan Gomes",1,8,2
+start,chisl001,"Lonnie Chisenhall",1,9,10
+start,salad001,"Danny Salazar",1,0,1

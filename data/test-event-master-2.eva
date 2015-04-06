@@ -1,0 +1,145 @@
+id,CLE201409280
+version,2
+info,visteam,TBA
+info,hometeam,CLE
+info,site,CLE08
+info,date,2014/09/28
+info,number,0
+info,starttime,1:05PM
+info,daynight,day
+info,usedh,true
+info,umphome,kellj901
+info,ump1b,hamaa901
+info,ump2b,onorb901
+info,ump3b,reybd901
+info,howscored,park
+info,pitches,pitches
+info,temp,68
+info,winddir,ltor
+info,windspeed,7
+info,fieldcond,unknown
+info,precip,unknown
+info,sky,unknown
+info,timeofgame,148
+info,attendance,21400
+info,wp,houst002
+info,lp,cobba001
+info,save,
+start,guyeb001,"Brandon Guyer",0,1,7
+start,myerw001,"Wil Myers",0,2,9
+start,longe001,"Evan Longoria",0,3,5
+start,forsl001,"Logan Forsythe",0,4,4
+start,rodrs002,"Sean Rodriguez",0,5,3
+start,lonej001,"James Loney",0,6,10
+start,frann001,"Nick Franklin",0,7,6
+start,molij001,"Jose Molina",0,8,2
+start,kierk001,"Kevin Kiermaier",0,9,8
+start,cobba001,"Alex Cobb",0,0,1
+start,shucj001,"J.B. Shuck",1,1,7
+start,ramij003,"Jose Ramirez",1,2,6
+start,chisl001,"Lonnie Chisenhall",1,3,5
+start,santc002,"Carlos Santana",1,4,10
+start,murpd005,"David Murphy",1,5,9
+start,aguij001,"Jesus Aguilar",1,6,3
+start,waltz001,"Zach Walters",1,7,4
+start,perer003,"Roberto Perez",1,8,2
+start,holtt001,"Tyler Holt",1,9,8
+start,houst002,"T.J. House",1,0,1
+play,1,0,guyeb001,00,X,4!3/G+
+play,1,0,myerw001,01,CX,S7/L
+play,1,0,longe001,00,X,8/F
+play,1,0,forsl001,12,FF1B>B,SB2
+play,1,0,forsl001,22,FF1B>B.X,53/G
+play,1,1,shucj001,21,BFBX,43/G
+play,1,1,ramij003,32,CBTBBX,D9/G
+play,1,1,chisl001,00,X,3/G.2-3
+play,1,1,santc002,01,CX,8/F
+play,2,0,rodrs002,00,X,HR/78/L
+play,2,0,lonej001,12,CBFX,S8/L
+play,2,0,frann001,00,X,64(1)3/GDP
+play,2,0,molij001,10,BX,S7/G
+play,2,0,kierk001,10,BX,3/G
+play,2,1,murpd005,02,CFX,HR/89/F
+play,2,1,aguij001,22,BFBTFC,K
+play,2,1,waltz001,00,X,HR/9/L
+play,2,1,perer003,12,CSBFX,D9/L
+play,2,1,holtt001,12,SF*BX,S7/G.2-3
+play,2,1,shucj001,10,BX,16(1)3/GDP
+play,3,0,guyeb001,12,CBFH,HP
+play,3,0,myerw001,11,BCX,14(1)3/GDP
+play,3,0,longe001,11,CBX,63/G
+play,3,1,ramij003,11,CBX,63/G
+play,3,1,chisl001,21,CBBX,S8/G
+play,3,1,santc002,22,*B1FBFC,K
+play,3,1,murpd005,01,CX,63/G+
+play,4,0,forsl001,01,CX,5/L
+play,4,0,rodrs002,02,SSX,S6/G
+play,4,0,lonej001,10,B1,POCS2(136)
+play,4,0,lonej001,21,B1.CBX,31/G
+play,4,1,aguij001,12,BFFFS,K
+play,4,1,waltz001,12,CBFFX,4!/L-
+play,4,1,perer003,12,CBTS,K
+play,5,0,frann001,12,BCSS,K
+play,5,0,molij001,00,X,53/G
+play,5,0,kierk001,32,CFBBBS,K
+play,5,1,holtt001,00,X,D48/G
+play,5,1,shucj001,10,BX,43/G.2-3
+play,5,1,ramij003,10,*BX,7/SF/L.3-H
+play,5,1,chisl001,01,CX,S8/G
+play,5,1,santc002,00,>B,SB2
+play,5,1,santc002,21,>B.BCX,43/G
+play,6,0,guyeb001,00,,NP
+sub,lee-c004,"C.C. Lee",1,0,1
+play,6,0,guyeb001,10,.BX,D7/L
+play,6,0,myerw001,02,FCB,WP.2-3
+play,6,0,myerw001,12,FCB.S,K
+play,6,0,longe001,00,X,9/SF/F.3-H
+play,6,0,forsl001,31,BBBCB,W
+play,6,0,rodrs002,02,FCS,K
+play,6,1,murpd005,01,CX,S8/G
+play,6,1,aguij001,12,1FBSF1X,8/F
+play,6,1,waltz001,02,SF1X,D7/L.1-H
+play,6,1,perer003,01,CX,8/L
+play,6,1,holtt001,12,SCBFFS,K
+play,7,0,lonej001,00,,NP
+sub,crock001,"Kyle Crockett",1,0,1
+play,7,0,lonej001,02,.CFS,K
+play,7,0,frann001,12,FSBX,63/G
+play,7,0,molij001,12,BFSS,K
+play,7,1,shucj001,00,,NP
+sub,belij001,"Jeff Beliveau",0,0,1
+play,7,1,shucj001,00,.X,S8/G
+play,7,1,ramij003,02,CFF>X,S6/G.1-3(E6/TH)
+play,7,1,chisl001,01,C1>B,SB2
+play,7,1,chisl001,32,C1>B.BBSB,W
+play,7,1,santc002,12,CCBX,S9/L.3-H;2-H;1-3
+play,7,1,murpd005,22,BCFBT,K
+play,7,1,aguij001,00,,NP
+sub,gomeb001,"Brandon Gomes",0,0,1
+play,7,1,aguij001,10,.BX,E5/TH/FO/G.3-H;1-2
+play,7,1,waltz001,22,BBSSS,K
+play,7,1,perer003,20,BBX,8/F
+play,8,0,kierk001,00,,NP
+sub,mcalz001,"Zach McAllister",1,0,1
+play,8,0,kierk001,11,.FBX,7/F
+play,8,0,guyeb001,00,X,53/G
+play,8,0,myerw001,02,CCS,K
+play,8,1,holtt001,00,,NP
+sub,riefc001,"C.J. Riefenhauser",0,0,1
+play,8,1,holtt001,32,.BBBCFFX,9/F
+play,8,1,shucj001,11,BCX,7/L
+play,8,1,ramij003,02,CSFX,S8/L
+play,8,1,chisl001,02,1CCFX,7/L
+play,9,0,longe001,00,X,S8/G
+play,9,0,forsl001,12,CSBFS,K
+play,9,0,rodrs002,00,X,9/F
+play,9,0,lonej001,00,>B,DI.1-2
+play,9,0,lonej001,32,>B.BSTBFX,31/G
+data,er,cobba001,4
+data,er,belij001,3
+data,er,gomeb001,0
+data,er,riefc001,0
+data,er,houst002,1
+data,er,lee-c004,1
+data,er,crock001,0
+data,er,mcalz001,0
