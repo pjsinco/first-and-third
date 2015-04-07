@@ -15,6 +15,10 @@ class Test_GameState extends PHPUnit_Framework_TestCase
     m::close();
   }
 
+  public function testTrue() {
+    $this->assertTrue( true );
+  }
+
 
 
 } // eoc

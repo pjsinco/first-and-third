@@ -176,4 +176,16 @@ class Test_Chadwick extends PHPUnit_Framework_TestCase
     $this->assertFalse( Chadwick::last_play_event_num( '2014', $this->lotsa_false ) );
   }
 
+  public function testOutsOnPlay() {
+    $exp = '1';
+    $actual = Chadwick::outs_on_play( '2014', 'test-event-master-0.eva' );
+    $this->assertEquals( $exp, $actual );
+
+    $actual = Chadwick::outs_on_play( '2014', 'test-event-master-1.eva' );
+    $this->assertEquals( $exp, $actual );
+
+    $actual = Chadwick::outs_on_play( '2014', 'test-event-master-2.eva' );
+    $this->assertEquals( $exp, $actual );
+  }
+
 } // eoc

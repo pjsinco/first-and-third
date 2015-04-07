@@ -9,8 +9,9 @@
 class Result {
 
   const FIELDING_PHASE_START = 12 ;
+  private $sac_booklet;
   private $game_state;
-  private $board_val;
+  private $lookup;
   private $board_xml;
   public $des;
   public $outs;
@@ -21,21 +22,22 @@ class Result {
   /**
    * 
    */
-  public function __construct( $board_val, $game_state ) {
+  public function __construct( $lookup, $game_state, $sac_booklet = FALSE ) {
+    $this->sac_booklet = $sac_booklet;
     $this->game_state = $game_state;
-    $this->board_val = (string) $board_val;
+    $this->lookup = (string) $lookup;
     $this->board_xml = simplexml_load_file( 'boards/game-board-5.xml' );
 
-    $this->fetch_result( $board_val, $game_state );
+    $this->fetch_result( $lookup, $game_state );
   }
 
-  private function is_fielding_phase( $board_val ) {
+  private function is_fielding_phase( $lookup ) {
   
-    return $board_val >= self::FIELDING_PHASE_START;
+    return $lookup >= self::FIELDING_PHASE_START;
   }
     
-  private function fetch_result( $board_val, $game_state ) {
-    $xpath = $this->format_xpath( $board_val );
+  private function fetch_result( $lookup, $game_state ) {
+    $xpath = $this->format_xpath( $lookup );
     $conditions = $this->fetch_conditions( $xpath );
     $condition_keys = $this->isolate_condition_keys( $conditions );
     $xpath_final = $this->get_xpath_for_result( $xpath, $condition_keys );
@@ -44,15 +46,15 @@ class Result {
     $this->set_result_attrs( $attrs );
   }
 
-  private function format_xpath( $board_val ) {
+  private function format_xpath( $lookup ) {
 
-    if ( $this->is_fielding_phase( $board_val ) ) {
+    if ( $this->is_fielding_phase( $lookup ) ) {
       $xpath = sprintf(
         '//play[@val=%1$s]/fielding[@val=%2$s]',
-        $board_val, $this->game_state->get_fielding()
+        $lookup, $this->game_state->get_fielding()
       );
     } else { // we're in eh hitt
-      $xpath = sprintf( '//play[@val=%1$s]', $board_val );
+      $xpath = sprintf( '//play[@val=%1$s]', $lookup );
     }
 
     return $xpath;

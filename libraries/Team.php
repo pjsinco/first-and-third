@@ -7,7 +7,7 @@ class Team
 {
 
   public $player_ids = array();
-  public $batting_order = array();
+  public $batting_order;
   public $defense = array();
   public $reserves = array(); 
   

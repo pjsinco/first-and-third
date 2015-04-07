@@ -9,19 +9,25 @@
  */
 class GameState {
 
-  private $scorecard;
+  //private $scorecard;
+
+  private $event_count;
 
   // game
   private $inning;
-  private $half;
-  private $bases;
+  private $batting_team;
+  private $outs;
+  private $inning_score;
+
+  private $runners;
   private $balls;
   private $strikes;
-  private $outs;
   private $zero_outs;
   private $two_outs;
-  private $home_team_runs;
-  private $away_team_runs;
+
+  private $score = array();
+  private $hits = array();
+  private $errors = array();
 
   // pitcher
   private $p_sym;
@@ -44,14 +50,14 @@ class GameState {
 
 
   //public function __construct( $inning, $half, $home_team_runs, $away_team_runs ) {
-  public function __construct( $scorecard, $args = array() ) {
+  public function __construct( $batter, $args = array() ) {
 
     extract( $args );
 
-    $this->scorecard = $scorecard;
+    //$this->scorecard = $scorecard;
     $this->outs = ( $outs ? $outs : 0) ;
-    $this->inning = $scorecard->inning; // todo needed?
-    $this->half = $scorecard->half; // todo needed?
+    //$this->inning = $scorecard->inning; // todo needed?
+    //$this->half = $scorecard->half; // todo needed?
     $this->bases = ( $bases ? $bases : 0 );
     $this->zero_outs = $this->has_zero_outs();
     $this->two_outs = $this->has_two_outs();

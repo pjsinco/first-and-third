@@ -14,14 +14,12 @@ class BattingOrder implements Iterator
    *
    */
   public function __construct( $order ) {
-
     if ( $order == NULL || count( $order ) !== 9 ) {
       throw new InvalidArgumentException();
     }
 
     $this->order = $order;
     $this->pos = 0;
-    
   }
 
   public function current() {
@@ -51,6 +49,18 @@ class BattingOrder implements Iterator
     return $this->pos < $this->max_pos;
   }
 
+  public function __toString() {
+    echo PHP_EOL;
+    $str = '';
+    foreach ( $this->order as $batter ) {
+      if ( $batter == $this->current() ) {
+        $str .= ' >' . $batter . PHP_EOL;
+        continue;
+      }
+      $str .= '  ' . $batter . PHP_EOL;
+    }
+    return $str . PHP_EOL;
+  }
 
 } // eoc
 

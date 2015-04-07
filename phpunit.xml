@@ -1,14 +1,20 @@
 <!-- <phpunit verbose="true" colors="true" bootstrap="tests/bootstrap.php"> -->
 <phpunit verbose="true" colors="true">
   <testsuites>
-    <!--<testsuite name="First and Third Test Suite">-->
-      <!--<directory prefix="test-" suffix=".php">./tests</directory>-->
-    <!--</testsuite>-->
-    <testsuite name="Chadwick">
+    <testsuite name="result">
+      <directory prefix="test-" suffix=".php">./tests/result</directory>
+    </testsuite>
+    <testsuite name="gamestate">
+      <directory prefix="test-" suffix=".php">./tests/gamestate</directory>
+    </testsuite>
+    <testsuite name="chadwick">
       <directory prefix="test-" suffix=".php">./tests/chadwick</directory>
     </testsuite>
     <testsuite name="batting-order">
       <directory prefix="test-" suffix=".php">./tests/batting-order</directory>
+    </testsuite>
+    <testsuite name="runners">
+      <directory prefix="test-" suffix=".php">./tests/runners</directory>
     </testsuite>
   </testsuites>
 </phpunit>
