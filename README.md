@@ -277,3 +277,6 @@ number  field
 
 ###2014-04-06
 * [PHP Live Regex](http://www.phpliveregex.com/)
+
+###2014-04-07
+* [Retrosheet hit location diagram](http://www.retrosheet.org/location.htm)

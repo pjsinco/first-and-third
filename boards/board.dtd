@@ -1,0 +1,34 @@
+<!ELEMENT board (play+)>
+<!ELEMENT play ((result*, conditions*) | fielding*)>
+<!ELEMENT result EMPTY>
+<!ELEMENT conditions (result)>
+<!ELEMENT fielding (result | conditions*)+>
+
+<!ATTLIST conditions 
+  zero_outs (t|f) #IMPLIED
+  two_outs (t|f) #IMPLIED
+  p_sym (w|x|y|z) #IMPLIED
+  against (a|b|c|d) #IMPLIED
+  infield (c|d) #IMPLIED
+  double_cols (t|f) #IMPLIED
+  star_14 (t|f) #IMPLIED
+  batter_speed (n|f|s) #IMPLIED
+  on_1b_speed (n|f|s) #IMPLIED
+  on_2b_speed (n|f|s) #IMPLIED
+  on_3b_speed (n|f|s) #IMPLIED
+  play_it_safe (t|f) #IMPLIED>
+
+<!ATTLIST result 
+  des CDATA #REQUIRED
+  pitch (S|C|K|F|T|B) #IMPLIED
+  weird (t|f) #IMPLIED
+  event CDATA #REQUIRED>
+
+<!ATTLIST play 
+  val CDATA #REQUIRED>
+
+<!ATTLIST fielding 
+  val (1|2|3) #REQUIRED>
+
+<!ATTLIST board 
+  state (0|1|2|3|4|5|6|7) #REQUIRED>

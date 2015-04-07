@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?><!DOCTYPE board SYSTEM "board.dtd">
+<board state="5">
+  <play val="1">
+    <result des="HOMERUN to deep left center field" outs="0" runs="3" state="0" type="atbat" batter="to_home" on_1b="to_home" on_3b="to_home" event="Homerun" charge_ab="t"/>
+  </play>
+  <play val="2">
+    <result des="TRIPLE to right center" outs="0" runs="2" state="4" type="atbat" batter="to_3b" on_1b="to_home" on_3b="to_home" event="Triple" charge_ab="t"/>
+  </play>
+  <play val="3">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="4">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="5">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="6">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="7">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="8">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="9">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="10">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="11">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="12">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="13">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="14">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="15">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="16">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="17">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="18">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="19">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="20">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="21">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="22">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="23">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="24">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="25">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="26">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="27">
+    <result des="" outs="" runs="" state="" type="" batter="" on_1b="" on_3b="" event="event" charge_ab="t"/>
+  </play>
+  <play val="28">
+    <conditions infield="c" two_outs="f">
+      <result des="Out at 1st; runner holds 3rd; other to 2nd; A-SS PO-1B" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="hold" event="groundout" charge_ab="t"/>
+    </conditions>
+    <conditions infield="c" two_outs="t">
+      <result des="Out at 1st; A-SS PO-1B" outs="1" runs="0" state="inning_over" type="atbat" batter="inning_over" on_1b="inning_over" on_3b="inning_over" event="groundout" charge_ab="t"/>
+    </conditions>
+    <conditions infield="d" two_outs="f">
+      <result des="Out at 1st; runners advance one base; A-SS PO-1B" outs="1" runs="1" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="to_home" event="groundout" charge_ab="t" rbi="1"/>
+    </conditions>
+    <conditions infield="d" two_outs="t">
+      <result des="Out at 1st; A-SS PO-1B" outs="1" runs="0" state="inning_over" type="atbat" batter="out_at_1b" on_1b="inning_over" on_3b="inning_over" event="groundout" charge_ab="t"/>
+    </conditions>
+  </play>
+  <play val="29">
+    <result des="Out at 1st; runner to 2nd; other holds; A-P PO-1B" outs="1" runs="0" state="6" type="atbat" batter="out_at_1b" on_1b="to_2b" on_3b="hold" event="groundout" charge_ab="t"/>
+    <conditions two_outs="t">
+      <result des="Out at 1st; A-P PO-1B" outs="1" runs="0" state="inning_over" type="atbat" batter="out_at_1b" on_1b="inning_over" on_3b="inning_over" event="groundout" charge_ab="t"/>
+    </conditions>
+  </play>
+  <play val="30">
+    <result des="Fly out; runners hold; PO-LF" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold" event="flyout" charge_ab="t"/>
+    <conditions two_outs="t">
+      <result des="Fly out; PO-LF" outs="1" runs="0" state="inning_over" type="atbat" batter="out" on_1b="inning_over" on_3b="inning_over" event="flyout" charge_ab="t"/>
+    </conditions>
+  </play>
+  <play val="31">
+    <result des="SINGLE through 2nd; one runner scores; other to 3rd" outs="0" runs="1" state="5" type="atbat" batter="to_1b" on_1b="to_3b" on_3b="to_home" event="single" charge_ab="t"/>
+  </play>
+  <play val="32">
+    <result des="Fly out; runner doubled off 1st; other scores; PO-RF A-RF PO-1B" outs="2" runs="1" state="0" type="atbat" batter="out" on_1b="out_at_1b" on_3b="to_home" event="flyout" charge_ab="t" weird="t"/>
+    <conditions two_outs="f" zero_outs="f">
+      <result des="Fly out; runner doubled off 1st; PO-RF A-RF PO-1B" outs="1" runs="0" state="inning_over" type="atbat" batter="out" on_1b="out_at_1b" on_3b="inning_over" event="flyout" charge_ab="t" weird="t"/>
+    </conditions>
+    <conditions zero_outs="t">
+      <result des="Fly out; runner doubled off 1st; other scores; PO-RF A-RF PO-1B" outs="2" runs="1" state="0" type="atbat" batter="out" on_1b="out_at_1b" on_3b="to_home" event="flyout" charge_ab="t" weird="t"/>
+    </conditions>
+    <conditions two_outs="t">
+      <result des="Fly out; PO-RF" outs="1" runs="0" state="inning_over" type="atbat" batter="out" on_1b="inning_over" on_3b="inning_over" event="flyout" charge_ab="t"/>
+    </conditions>
+  </play>
+  <play val="33">
+    <result des="Double play; line drive; PO-2B A-2B PO-1B; runner holds 3rd" outs="2" runs="0" state="inning_over" type="atbat" batter="out" on_1b="inning_over" on_3b="inning_over" event="grounded_into_dp" charge_ab="t"/>
+    <conditions two_outs="t">
+      <result des="Line out; PO-2B" outs="1" runs="0" state="inning_over" type="atbat" batter="out" on_1b="inning_over" on_3b="inning_over" event="lineout" charge_ab="t"/>
+    </conditions>
+  </play>
+  <play val="34">
+    <result des="Double play; line drive; PO-SS A-SS PO-1B; runner holds 3rd" outs="2" runs="0" state="inning_over" type="atbat" batter="out" on_1b="inning_over" on_3b="inning_over" event="grounded_into_dp" charge_ab="t"/>
+    <conditions two_outs="t">
+      <result des="Line out; PO-SS" outs="1" runs="0" state="inning_over" type="atbat" batter="out" on_1b="inning_over" on_3b="inning_over" event="lineout" charge_ab="t"/>
+    </conditions>
+  </play>
+  <play val="35">
+    <result des="Foul out; PO-3B" outs="1" runs="0" state="5" type="atbat" batter="out" on_1b="hold" on_3b="hold" event="foul_out" charge_ab="t"/>
+  </play>
+  <play val="36">
+    <result des="Ball; runner steals 2nd; other holds" outs="0" runs="0" state="6" type="action" batter="atbat" on_1b="to_2b" on_3b="hold" event="stolen_base_2b" charge_ab="f" b="1"/>
+  </play>
+  <play val="37">
+    <result des="Strike; runner caught off 3rd; other to 2nd; A-C PO-3B" outs="1" runs="0" state="2" type="action" batter="atbat" on_1b="to_2b" on_3b="out_at_3b" event="picked_off_3b" charge_ab="f" s="1"/>
+  </play>
+  <play val="38">
+    <result des="Ball; double steal; runners advance one base" outs="0" runs="1" state="2" type="action" batter="atbat" on_1b="to_2b" on_3b="to_home" event="double_steal_2b_home" charge_ab="t" b="1"/>
+  </play>
+  <play val="39">
+    <result des="Strike; double steal; runners advance one base" outs="0" runs="1" state="2" type="action" batter="atbat" on_1b="to_2b" on_3b="to_home" event="double_steal_2b_home" charge_ab="t" s="1"/>
+  </play>
+  <play val="40">
+    <result des="Strike; runner out at home; other to 2nd; A-C A-SS PO-C" outs="1" runs="0" state="2" type="action" batter="atbat" on_1b="to_2b" on_3b="out_at_home" event="caught_stealing_home" charge_ab="f" s="1"/>
+  </play>
+  <play val="41">
+    <result des="Triple play; line drive; PO-3B PO-3B A-3B PO-1B" outs="3" runs="0" state="inning_over" type="atbat" batter="out_at_1b" on_1b="inning_over" on_3b="out_at_3b" event="lined_into_tp" charge_ab="t"/>
+    <conditions zero_outs="t">
+      <result des="Triple play; line drive; PO-3B PO-3B A-3B PO-1B" outs="3" runs="0" state="inning_over" type="atbat" batter="out_at_1b" on_1b="inning_over" on_3b="out_at_3b" event="lined_into_tp" charge_ab="t"/>
+    </conditions>
+    <conditions two_outs="f" zero_outs="f">
+      <result des="Double play; line drive; PO-3B PO-3B" outs="2" runs="0" state="inning_over" type="atbat" batter="out" on_1b="inning_over" on_3b="out_at_3b" event="lined_into_dp" charge_ab="t"/>
+    </conditions>
+    <conditions two_outs="t">
+      <result des="Line out; PO-3B" outs="1" runs="0" state="inning_over" type="atbat" batter="out" on_1b="inning_over" on_3b="inning_over" event="lineout" charge_ab="t"/>
+    </conditions>
+  </play>
+  <play val="42">
+    <result des="Hit by pitcher" outs="0" runs="0" state="7" type="atbat" batter="to_1b" on_1b="to_2b" on_3b="hold" event="hit_by_pitch" charge_ab="f"/>
+  </play>
+</board>
