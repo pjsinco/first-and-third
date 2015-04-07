@@ -16,5 +16,8 @@
     <testsuite name="runners">
       <directory prefix="test-" suffix=".php">./tests/runners</directory>
     </testsuite>
+    <testsuite name="event">
+      <directory prefix="test-" suffix=".php">./tests/event</directory>
+    </testsuite>
   </testsuites>
 </phpunit>

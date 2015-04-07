@@ -9,7 +9,7 @@
 class Result {
 
   const FIELDING_PHASE_START = 12 ;
-  private $sac_booklet;
+  private $sac;
   private $game_state;
   private $lookup;
   private $board_xml;
@@ -22,7 +22,7 @@ class Result {
   /**
    * 
    */
-  public function __construct( $lookup, $game_state, $sac_booklet = FALSE ) {
+  public function __construct( $lookup, $game_state, $sac = FALSE ) {
     $this->sac_booklet = $sac_booklet;
     $this->game_state = $game_state;
     $this->lookup = (string) $lookup;
@@ -32,7 +32,6 @@ class Result {
   }
 
   private function is_fielding_phase( $lookup ) {
-  
     return $lookup >= self::FIELDING_PHASE_START;
   }
     
@@ -47,7 +46,6 @@ class Result {
   }
 
   private function format_xpath( $lookup ) {
-
     if ( $this->is_fielding_phase( $lookup ) ) {
       $xpath = sprintf(
         '//play[@val=%1$s]/fielding[@val=%2$s]',
