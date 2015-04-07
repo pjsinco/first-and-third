@@ -46,31 +46,27 @@ class TestEvent extends PHPUnit_Framework_TestCase
 
   public function testConstructorMakesCorrectEventType() {
     try {
-      $e = new Event( Event::TYPE_ID );
-      $exp = 'id';
-      $actual = $e->get_type();
-      $this->assertEquals( $exp, $actual );
+      foreach ($this->types as $type) {
+        $e = new Event( Event::TYPE_ID );
+        $exp = $type;
+        $actual = $e->get_type();
+        $this->assertEquals( $exp, $actual );
+      }
 
-      $e = new Event( Event::TYPE_COM );
-      $exp = 'com';
-      $actual = $e->get_type();
-      $this->assertEquals( $exp, $actual );
+    } catch ( Exception $e ) {
+      echo 'error testConstructorMakesCorrectEventType';
+    }
+  }
 
-
+  public function testEmptyConstructorSetsPlayType() {
+    try {
       $e = new Event();
       $exp = 'play';
       $actual = $e->get_type();
       $this->assertEquals( $exp, $actual );
-
-      $e = new Event( 'data' );
-      $exp = 'data';
-      $actual = $e->get_type();
-      $this->assertEquals( $exp, $actual );
-
-    } catch ( Exception $e ) {
-      echo 'error';
+    } catch (InvalidArgumentException $e) {
+      echo 'error testEmptyConstructorSetsPlayType';
     }
-
   }
 
   public function testConstructorThrowsException() {
@@ -122,7 +118,7 @@ class TestEvent extends PHPUnit_Framework_TestCase
     }
   }
 
-  public function testConstructorAddsValue() {
+  public function testConstructorAddsField() {
 
     try {
       $fields = array(
@@ -144,7 +140,7 @@ class TestEvent extends PHPUnit_Framework_TestCase
       $this->assertEquals( $exp, $actual );
 
     } catch (InvalidArgumentException $e) {
-      echo 'error testConstructorAddsValue';
+      echo 'error testConstructorAddsField';
     }
   }
 
