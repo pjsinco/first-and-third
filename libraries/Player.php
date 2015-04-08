@@ -14,10 +14,14 @@ class Player
   public $throws;
   public $defense = array();
   public $j_val; 
+  public $rating = array(); // 
+  public $card = array();
 
   // pitcher
-  public $grade;
-  public $p_sym;
+  public $s_grade;
+  public $r_grade;
+  public $xy;
+  public $zw;
   public $p_star; // bool
 
   /**
@@ -25,6 +29,14 @@ class Player
    */
   public function __construct() {
     
+  }
+
+  private function set_card() {
+
+  }
+
+  private function set_rating() {
+    // body...
   }
 
   public function __get( $prop ) {

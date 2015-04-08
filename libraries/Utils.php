@@ -21,6 +21,39 @@ class Utils
     }
   }
 
-}
+  /**
+   * https://gist.github.com/jaywilliams/385876
+   * Here is a quick and easy way to convert a CSV file to an associated 
+   * array:
+   */
+  public static function csv_to_array( $filename = '', $delim = ',' ) {
+  
+    if ( ! file_exists( $filename ) || ! is_readable( $filename ) ) {
+      return FALSE;
+    }
+  
+    $header = NULL;
+    $data = array();
+  
+    $handle = fopen( $filename, 'r' );
+  
+    if ( $handle !== FALSE ) {
+  
+      while ( $row = fgetcsv( $handle, 1000, $delim ) ) {
+        if ( !$header ) {
+          $header = $row;
+        } else {
+          $id = $row[0];
+          $data[$id] = array_combine( $header, $row );
+        }
+      }
+    }
+  
+    fclose( $handle );
+  
+    return $data;
+  }
+
+} // eoc
 
 ?>
