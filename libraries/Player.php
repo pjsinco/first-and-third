@@ -27,7 +27,9 @@ class Player
   /**
    * 
    */
-  public function __construct() {
+  public function __construct( $attrs ) {
+    extract( $attrs );
+
     
   }
 

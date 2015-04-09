@@ -25,5 +25,8 @@
     <testsuite name="player">
       <directory prefix="test-" suffix=".php">./tests/player</directory>
     </testsuite>
+    <testsuite name="utils">
+      <directory prefix="test-" suffix=".php">./tests/utils</directory>
+    </testsuite>
   </testsuites>
 </phpunit>

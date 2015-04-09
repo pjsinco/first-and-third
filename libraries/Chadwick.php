@@ -1,6 +1,5 @@
 <?php 
 
-
 /**
  * Wrapper for Chadwick processes
  *
@@ -120,6 +119,22 @@ class Chadwick
     'fielder_with_fifth_assist',
     'event_num',
   );
+
+  /**
+   * Change to the directory that contains the event files,
+   * which should be 'data'. We need to be inside this directory
+   * when calling many of our Chadwick:: functions.
+   *
+   * @return boolean indicating success
+   *
+   */
+  public static function change_to_data_dir() {
+    if ( basename( getcwd() ) != 'data' ) {
+      return chdir( 'data' );
+    } else {
+      return true;
+    }
+  }
 
   /**
    * Returns the entire event file as a string

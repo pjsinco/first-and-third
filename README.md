@@ -280,3 +280,40 @@ number  field
 
 ###2014-04-07
 * [Retrosheet hit location diagram](http://www.retrosheet.org/location.htm)
+
+###2014-04-08
+* File structure we're setting up
+    ```
+    ...
+
+    libraries/
+    ├── BattingOrder.php
+    ├── BoardGame.php
+    ├── Chadwick.php
+    ├── Event.php
+    ├── EventFile.php
+    ├── Game.php
+    ├── GameState.php
+    ├── GameTurn.php
+    ├── Gameplay.php
+    ├── Inning.php
+    ├── Player.php
+    ├── Result.php
+    ├── Runners.php
+    ├── Scorecard.php
+    ├── Team.php
+    ├── TeamInning.php
+    └── Utils.php
+    data/
+    └── years
+        ├── 1969
+        │   ├── 1969BAL.EVA
+        │   ├── BAL1969.csv
+        │   └── TEAM1969
+        ├── 1979
+        └── 2014
+    ```
+
+###2014-04-09
+* CSS-Tricks: [PHP Include from Root](https://css-tricks.com/php-include-from-root/)
+

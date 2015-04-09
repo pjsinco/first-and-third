@@ -1,14 +1,12 @@
 <?php 
 
-echo 'play extract';
+$data_dir = '/Users/pj/Sites/first-and-third/data/years';
+$dirs = scandir($data_dir);
+print_r($dirs);
 
-$args = array(
-  'two_outs' => true,
-  'p_sym' => 'x',
-);
 
-extract( $args );
+chdir('year');
 
-echo '<pre>'; var_dump($p_sym); echo '</pre>'; die();
+
 
 ?>
