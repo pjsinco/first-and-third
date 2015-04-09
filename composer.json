@@ -10,6 +10,7 @@
     "require": {
         "phpunit/phpunit": "4.7.*@dev",
         "oodle/krumo": "dev-master",
-        "mockery/mockery": "0.9.*"
+        "mockery/mockery": "0.9.*",
+        "mikey179/vfsStream": "1.5.*@dev"
     }
 }
