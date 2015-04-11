@@ -1,6 +1,8 @@
 <?php 
 
-require_once 'libraries/Team.php';
+namespace troutx\yaz;
+
+require 'vendor/autoload.php';
 
 /**
  * BoardGame

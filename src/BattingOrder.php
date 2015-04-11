@@ -1,9 +1,14 @@
 <?php 
 
+namespace troutx\yaz;
+
+require 'vendor/autoload.php';
+
+
 /**
  * BattingOrder
  */
-class BattingOrder implements Iterator
+class BattingOrder implements \Iterator
 {
   private $pos;
   private $max_pos = 8;
@@ -15,7 +20,7 @@ class BattingOrder implements Iterator
    */
   public function __construct( $order ) {
     if ( $order == NULL || count( $order ) !== 9 ) {
-      throw new InvalidArgumentException();
+      throw new \InvalidArgumentException();
     }
 
     $this->order = $order;

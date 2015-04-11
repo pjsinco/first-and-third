@@ -1,8 +1,8 @@
 <?php
 
 require './vendor/autoload.php';
-require 'libraries/GameState.php';
 use \Mockery as m;
+use troutx\yaz\GameState;
 
 class Test_GameState extends PHPUnit_Framework_TestCase
 {

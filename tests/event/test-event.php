@@ -1,8 +1,8 @@
 <?php
 
-require './vendor/autoload.php';
-require 'libraries/Event.php';
+require 'vendor/autoload.php';
 use \Mockery as m;
+use troutx\yaz\Event;
 
 class TestEvent extends PHPUnit_Framework_TestCase
 {
@@ -53,7 +53,7 @@ class TestEvent extends PHPUnit_Framework_TestCase
         $this->assertEquals( $exp, $actual );
       }
 
-    } catch ( Exception $e ) {
+    } catch ( \Exception $e ) {
       echo 'error testConstructorMakesCorrectEventType';
     }
   }
@@ -64,7 +64,7 @@ class TestEvent extends PHPUnit_Framework_TestCase
       $exp = 'play';
       $actual = $e->get_type();
       $this->assertEquals( $exp, $actual );
-    } catch (InvalidArgumentException $e) {
+    } catch (\InvalidArgumentException $e) {
       echo 'error testEmptyConstructorSetsPlayType';
     }
   }
@@ -97,7 +97,7 @@ class TestEvent extends PHPUnit_Framework_TestCase
       $actual = $e->get_fields();
       $this->assertEquals( $exp, $actual );
 
-    } catch (InvalidArgumentException $e) {
+    } catch (\InvalidArgumentException $e) {
       echo ' error testConstructorWithFields ';
     }
   }
@@ -113,7 +113,7 @@ class TestEvent extends PHPUnit_Framework_TestCase
       $actual = $this->invokeMethod( $e, 'valid', array() );
       $this->assertFalse( $actual );
 
-    } catch (InvalidArgumentException $iae) {
+    } catch (\InvalidArgumentException $iae) {
       echo 'error testValid';
     }
   }
@@ -139,7 +139,7 @@ class TestEvent extends PHPUnit_Framework_TestCase
       $actual = $e;
       $this->assertEquals( $exp, $actual );
 
-    } catch (InvalidArgumentException $e) {
+    } catch (\InvalidArgumentException $e) {
       echo 'error testConstructorAddsField';
     }
   }
@@ -151,7 +151,7 @@ class TestEvent extends PHPUnit_Framework_TestCase
       $home_id = 'MIN';
       $visit_id = 'CLE';
       $e->set_game_id( $ts, $home_id, $visit_id );
-    } catch (InvalidArgumentException $e) {
+    } catch (\InvalidArgumentException $e) {
       echo 'error testSetGameId';
     }
   }
@@ -163,7 +163,7 @@ class TestEvent extends PHPUnit_Framework_TestCase
       $exp = 'id,CLE197904250';
       $actual = $e->get_final_event();
       $this->assertEquals( $exp, $actual );
-    } catch (InvalidArgumentException $e) {
+    } catch (\InvalidArgumentException $e) {
       echo 'error testConstructorWithTwoArgsGetsFinalized';
     }
   }

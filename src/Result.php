@@ -1,4 +1,9 @@
 <?php 
+
+namespace troutx\yaz;
+
+require 'vendor/autoload.php';
+
 // TODO
 // * needs refactoring
 // * board value 1-11 does not have fielding, so check before looking up

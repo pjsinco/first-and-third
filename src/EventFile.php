@@ -1,7 +1,8 @@
 <?php 
 
-require_once 'libraries/Utils.php';
-require_once 'libraries/Event.php';
+namespace troutx\yaz;
+
+require 'vendor/autoload.php';
 
 /**
  * Class to manage creating, writing to, and reading from event files.

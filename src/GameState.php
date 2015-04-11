@@ -1,5 +1,8 @@
 <?php 
 
+namespace troutx\yaz;
+require 'vendor/autoload';
+
 /**
  * GameState
  * Maintains a snapshop of current all game conditions

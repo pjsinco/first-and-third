@@ -1,8 +1,8 @@
 <?php
 
 require './vendor/autoload.php';
-require 'libraries/Runners.php';
 use \Mockery as m;
+use \troutx\yaz\Runners;
 
 class Test_Runners extends PHPUnit_Framework_TestCase {
 

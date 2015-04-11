@@ -317,3 +317,8 @@ number  field
 ###2014-04-09
 * CSS-Tricks: [PHP Include from Root](https://css-tricks.com/php-include-from-root/)
 
+###2014-04-11
+* A curated list of amazingly awesome PHP libraries, resources and shiny things: [Awesome PHP](https://github.com/ziadoz/awesome-php)
+
+* Useful packages?
+    * [League/CSV](http://csv.thephpleague.com/)

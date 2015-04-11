@@ -1,9 +1,8 @@
 <?php
 
 require './vendor/autoload.php';
-require 'libraries/Utils.php';
+//require 'libraries/Utils.php';
 use \Mockery as m;
-use org\bovigo\vfs as vfs;
 
 
 class TestUtils extends PHPUnit_Framework_TestCase
@@ -54,12 +53,33 @@ class TestUtils extends PHPUnit_Framework_TestCase
   }
 
   public function testValidTeamReturnsTrue() {
-
     $year = 1969;
-    $teams = array( 'BAL', 'NYA', 'CHN', 'DET', 'CLE' );
+    $teams = array( 'BAL' );
     foreach ( $teams as $team ) {
       $this->assertTrue( Utils::can_play_game_with_team( $year, $team ) );
     }
+  }
+
+  public function testValidTeamReturnsFalse() {
+    $year = 1869;
+    $teams = array( 'CLE', ' CHN ', 'ATL' );
+    foreach ( $teams as $team ) {
+      $this->assertFalse( Utils::can_play_game_with_team( $year, $team ) );
+    }
+  }
+
+  public function testPathToYearDir() {
+    $exp = '/Users/pj/Sites/first-and-third/data/years/2015';
+    $actual = Utils::path_to_year_dir( '2015' );
+    $this->assertEquals( $exp, $actual );
+
+    $exp = '/Users/pj/Sites/first-and-third/data/years/1950';
+    $actual = Utils::path_to_year_dir( 1950 );
+    $this->assertEquals( $exp, $actual );
+
+    $exp = '/Users/pj/Sites/first-and-third/data/years/1973';
+    $actual = Utils::path_to_year_dir( ' 1973   ' );
+    $this->assertEquals( $exp, $actual );
   }
 
 } // eoc

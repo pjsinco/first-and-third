@@ -1,5 +1,9 @@
 <?php 
 
+namespace troutx\yaz;
+
+require 'vendor/autoload.php';
+
 /**
  * Event
  */
@@ -71,7 +75,7 @@ class Event
    */
   public function __construct( $type = self::TYPE_PLAY, $fields = array() ) {
     if ( ! $this->set_type( $type ) || !is_array( $fields ) ) {
-      throw new InvalidArgumentException();
+      throw new \InvalidArgumentException();
     }
 
     if ( $fields ) {

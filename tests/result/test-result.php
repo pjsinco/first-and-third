@@ -1,8 +1,8 @@
 <?php
 
 require './vendor/autoload.php';
-require 'libraries/Result.php';
 use \Mockery as m;
+use \troutx\yaz\Result;
 
 class Test_Result extends PHPUnit_Framework_TestCase
 {

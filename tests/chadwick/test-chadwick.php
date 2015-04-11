@@ -1,8 +1,8 @@
 <?php
 
-require './vendor/autoload.php';
-require 'libraries/Chadwick.php';
+require 'vendor/autoload.php';
 use \Mockery as m;
+use \troutx\yaz\Chadwick;
 
 class Test_Chadwick extends PHPUnit_Framework_TestCase
 {

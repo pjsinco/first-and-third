@@ -1,5 +1,9 @@
 <?php 
 
+namespace troutx\yaz;
+
+require_once( './vendor/autoload.php' );
+
 /**
  * 
  */
@@ -29,8 +33,8 @@ class Utils
    * [project-root]/
    *   ...
    *   data/
-   *   └── years
-   *       ├── 1969
+   *   └── years/
+   *       ├── 1969/
    *       ├── ...
    *
    * @return string - the path to the data directory,
@@ -39,6 +43,23 @@ class Utils
    */
   public static function path_to_years_dir() {
     return self::path_to_data_dir() . DIRECTORY_SEPARATOR . self::DIR_YEARS;
+  }
+
+  /**
+   * Generates the path to a specific year directory.
+   *
+   * Expected file structure:
+   *
+   *   data/
+   *   └── years/
+   *       ├── 1969/
+   *       ├── 1973/
+   *
+   * @return string - the path to the directory for that year
+   */
+  public static function path_to_year_dir( $year ) {
+    return self::path_to_years_dir() . DIRECTORY_SEPARATOR . 
+      trim( $year );
   }
 
   /**
@@ -60,14 +81,14 @@ class Utils
    *
    * File structure:
    *  data/
-   *  └── years
-   *      ├── 1969
+   *  └── years/
+   *      ├── 1969/
    *      │   ├── 1969BAL.EVA
    *      │   ├── BAL1969.ROS
    *      │   ├── BAL1969.csv
    *      │   └── TEAM1969
-   *      ├── 1979
-   *      └── 2014
+   *      ├── 1979/
+   *      └── 2014/
    *
    * @return boolean - whether the game can be play in that year
    */
@@ -78,7 +99,7 @@ class Utils
         foreach ( $year_dirs as $dir ) {
           if ( $dir == trim( $year ) ) {
             if ( file_exists( self::path_to_years_dir() . 
-              DIRECTORY_SEPARATOR . $year . DIRECTORY_SEPARATOR . 
+              DIRECTORY_SEPARATOR . trim( $year ) . DIRECTORY_SEPARATOR . 
               self::format_team_filename( $year ) ) ) {
                 return true;
             }
@@ -97,9 +118,11 @@ class Utils
    * @param string $team_id - the team ID to check
    */
   public static function can_play_game_with_team( $year, $team_id ) {
-    if ( empty( $year ) === false  && empty( $team_id ) === false ) {
 
-      // TODO complete this function
+    if ( empty( $year ) === false && empty( $team_id ) === false &&
+      self::can_play_game_in_year( $year ) ) {
+    
+        return self::team_exists( $year, $team_id );
 
     }
     return false;
@@ -107,19 +130,48 @@ class Utils
   }
 
   /**
-   * https://gist.github.com/jaywilliams/385876
-   * Here is a quick and easy way to convert a CSV file to an associated 
-   * array:
+   * Checks whether a team exists in a given year.
+   *
+   * @param string $year - the year to check
+   * @param string $team_id - the retrosheet team ID
+   * @return boolean - whether the team exists that year
    */
-  public static function csv_to_array( $filename = '', $delim = ',' ) {
+  public static function team_exists( $year, $team_id ) {
+
+    $year = trim( $year );
+    $team_id = trim( $team_id );
+    $path = self::path_to_year_dir( $year ) .
+      DIRECTORY_SEPARATOR . self::format_team_filename( $year );
+    
+    // header row for TEAMYYYY file
+    $header = array( 'id', 'league', 'city', 'nickname' );
+    $teams = self::csv_to_array( $path, ',', $header );
+
+    foreach ($teams as $team) {
+      if ( $team['id'] == $team_id ) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * Generates an associated array from a CSV file.
+   * https://gist.github.com/jaywilliams/385876
+   *
+   * @param $filename string - the name of the CSV file
+   * @param $delim string - the delimiter for the file
+   * @param $header array - an array of headers for the file; 
+   *     include this array if the file has no header row
+   * @return array - the CSV file as an associative array
+   */
+  public static function csv_to_array( $filename = '', $delim = ',', $header = null ) {
   
     if ( ! file_exists( $filename ) || ! is_readable( $filename ) ) {
-      echo getcwd();
-      echo 'file doesnt exist';
       return FALSE;
     }
   
-    $header = NULL;
     $data = array();
   
     $handle = fopen( $filename, 'r' );

@@ -1,5 +1,9 @@
 <?php 
 
+namespace troutx\yaz;
+
+require 'vendor/autoload.php';
+
 /**
  * Wrapper for Chadwick processes
  *

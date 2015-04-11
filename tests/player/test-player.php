@@ -1,8 +1,8 @@
 <?php
 
 require './vendor/autoload.php';
-require 'libraries/Team.php';
 use \Mockery as m;
+use troutx\yaz\Player;
 
 
 class TestPlayer extends PHPUnit_Framework_TestCase

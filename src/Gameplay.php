@@ -1,5 +1,10 @@
 <?php 
 
+namespace troutx\yaz
+
+require 'vendor/autoload.php';
+
+
 /**
  * Gameplay
  */

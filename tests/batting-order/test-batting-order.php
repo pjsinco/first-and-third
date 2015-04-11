@@ -1,10 +1,10 @@
 <?php
 
-require './vendor/autoload.php';
-require 'libraries/BattingOrder.php';
+require 'vendor/autoload.php';
 use \Mockery as m;
+use \troutx\yaz\BattingOrder;
 
-class Test_BattingOrder extends PHPUnit_Framework_TestCase
+class TestBattingOrder extends PHPUnit_Framework_TestCase
 {
   private $order;
   private $empty_order;
@@ -48,28 +48,28 @@ class Test_BattingOrder extends PHPUnit_Framework_TestCase
 
     try {
       $order = new BattingOrder( $this->order );
-    } catch ( InvalidArgumentException $e ) {
+    } catch ( \InvalidArgumentException $e ) {
       $order = null;
     }
     $this->assertNotNull( $order );
 
     try {
       $order = new BattingOrder( $this->empty_order );
-    } catch ( InvalidArgumentException $e ) {
+    } catch ( \InvalidArgumentException $e ) {
       $order = null;
     }
     $this->assertNull( $order );
 
     try {
       $order = new BattingOrder( $this->bad_order );
-    } catch ( InvalidArgumentException $e ) {
+    } catch ( \InvalidArgumentException $e ) {
       $order = null;
     }
     $this->assertNull( $order );
 
     try {
       $order = new BattingOrder( $this->string_order );
-    } catch ( InvalidArgumentException $e ) {
+    } catch ( \InvalidArgumentException $e ) {
       $order = null;
     }
     $this->assertNull( $order );

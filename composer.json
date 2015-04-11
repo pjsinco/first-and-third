@@ -1,6 +1,11 @@
 {
     "name": "pj/first-and-third",
     "description": "Demo of a baseball sim",
+    "autoload": {
+      "psr-4": {
+        "troutx\\yaz\\": "src/"
+      }
+    },
     "authors": [
         {
             "name": "Patrick",
